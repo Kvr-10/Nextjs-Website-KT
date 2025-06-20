@@ -1,0 +1,480 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Parisienne&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  scroll-behavior: smooth;
+}
+
+/* main section carousel */
+.main__section__carousel>h1 {
+  text-align: center;
+  margin-bottom: 50px;
+  color: #595959;
+  font-size: 2rem;
+}
+
+/* scrap section */
+.scrap__section {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  padding: 30px 0;
+  max-width: 1200px;
+  margin: auto;
+  width: 100%;
+}
+
+/* scrap section card */
+.scrap__section__card {
+  width: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-decoration: none;
+  margin: 20px;
+  cursor: pointer;
+  text-decoration: none;
+  background: #fff;
+  border: none !important;
+  outline: none !important;
+}
+
+.scrap__section__card>img {
+  width: 100%;
+  max-width: 250px;
+  height: 200px;
+  transition: 0.3s;
+  border: 1px solid #000;
+  box-shadow: 13px 13px 0 rgba(0, 0, 0, 0.12);
+}
+
+.scrap__section__card>p {
+  padding: 20px 50px;
+  font-size: 1.7rem;
+  color: #fff;
+  background-image: url('/Image/button1.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-top: 20px;
+}
+
+/* modal */
+.modal__overlay {
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.modal__close__icon {
+  margin-right: -442px;
+  margin-bottom: 20px;
+}
+
+.modal__close__icon:hover {
+  cursor: pointer;
+  color: #56b124;
+}
+
+.modal__content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* border: 5px solid #56b124; */
+  /* background: #f0f0f0; */
+  background-color: #fff;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  border-radius: 5px;
+  outline: none;
+  padding: 22px;
+  width: 40%;
+  max-width: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.modal__content>h1 {
+  font-size: 1.7rem;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #595959;
+}
+
+.modal__content>p {
+  font-size: 1.2rem;
+  margin: 10px 0 20px;
+}
+
+.modal__content>input {
+  width: 80%;
+  padding: 12px 15px;
+  border-radius: 50px;
+  outline: none !important;
+  border: 1px solid #000;
+  margin: 10px 0;
+  font-size: 1rem;
+}
+
+.modal__content>label {
+  background-color: #e5e5e5;
+  cursor: pointer;
+  padding: 12px 30px;
+  border-radius: 50px;
+  font-size: 0.95rem;
+}
+
+.modal__content>input::placeholder {
+  font-size: 0.9rem;
+}
+
+.modal__content>div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.modal__content>div>button {
+  padding: 12px 50px;
+  background-color: #56b124;
+  color: #fff;
+  border: none !important;
+  outline: none !important;
+  cursor: pointer;
+  font-size: 1.2rem;
+  border-radius: 50px;
+  margin: 10px;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+.modal__content>div>button:hover {
+  background-color: #05242a;
+}
+
+/* carousel section */
+.carousel__section {
+  margin: 20px 0 100px;
+}
+
+.main__carousel {
+  width: 60%;
+  margin: auto;
+  max-width: 800px;
+}
+
+.carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 250px;
+}
+
+.carousel>img {
+  width: 30%;
+  height: 100%;
+}
+
+.carousel>div {
+  background: linear-gradient(135deg, #78d347, #1c4b03);
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  padding-left: 3rem;
+  width: 70%;
+  /* border: 2px solid red; */
+}
+
+.carousel>div>h1 {
+  font-size: 1.25rem;
+  width: 96%;
+  font-weight: normal;
+  color: #fff;
+  text-align: justify;
+  /* border: 2px solid yellow; */
+}
+
+.carousel>div>p {
+  color: black;
+  font-weight: bold;
+  margin-top: 1rem;
+  /* border: 2px solid blue; */
+}
+
+/* similar section */
+.similar__section {
+  margin: 70px auto 100px;
+  text-align: center;
+}
+
+.similar__section__heading {
+  font-size: 2.3rem;
+  margin-bottom: 40px;
+}
+
+/* sell faq top banner */
+.sell__faq__top__banner {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url('/Image/banner3.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 25vh;
+}
+
+.sell__faq__top__banner>h1 {
+  color: #fff;
+  font-size: 3rem;
+  text-align: center;
+}
+
+/* 1024px */
+@media only screen and (max-width: 1024px) {
+
+  /* scrap section */
+  .scrap__section {
+    padding: 40px 0;
+  }
+
+  /* modal */
+  .modal__content {
+    width: 50%;
+  }
+
+  /* carousel section */
+  .main__carousel {
+    width: 70%;
+  }
+
+  .carousel {
+    height: 220px;
+  }
+
+  .carousel>div {
+    padding-left: 2rem;
+  }
+
+  .carousel>div>h1 {
+    font-size: 1rem;
+  }
+
+  /* similar section */
+  .similar__section__heading {
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+  }
+}
+
+/* 768px */
+@media only screen and (max-width: 768px) {
+
+  /* main section carousel */
+  .main__section__carousel {
+    margin-top: 50px;
+  }
+
+  /* modal */
+  .modal__content {
+    width: 70%;
+  }
+
+  /* scrap section */
+  .scrap__section {
+    padding: 40px 0 0;
+    justify-content: space-evenly;
+  }
+
+  /* scrap section card */
+  .scrap__section__card {
+    width: 30%;
+  }
+
+  /* carousel section */
+  .main__carousel {
+    width: 85%;
+  }
+
+  .carousel>div {
+    padding-left: 1.5rem;
+  }
+
+  .carousel>div>h1 {
+    font-size: 0.9rem;
+  }
+
+  /* similar section */
+  .similar__section {
+    margin: 60px auto;
+  }
+
+  .similar__section__heading {
+    font-size: 2.1rem;
+    margin-bottom: 25px;
+  }
+
+  /* sell faq top banner */
+  .sell__faq__top__banner>h1 {
+    font-size: 2.5rem;
+  }
+}
+
+/* 480px */
+@media only screen and (max-width: 480px) {
+
+  /* main section carousel */
+  .main__section__carousel>h1 {
+    /* margin-bottom: 40px; */
+    font-size: 1.8rem;
+  }
+
+  /* scrap section */
+  .scrap__section {
+    padding: 25px 0 0;
+  }
+
+  /* modal */
+  .modal__content {
+    width: 95%;
+  }
+
+  .modal__content>h1 {
+    font-size: 1.5rem;
+    text-align: left;
+  }
+
+  .modal__content>input {
+    width: 100%;
+  }
+
+  .modal__content>div {
+    flex-direction: column;
+  }
+
+  .modal__content>div>button {
+    margin: 5px;
+  }
+
+  /* scrap section card */
+  .scrap__section__card {
+    width: 60%;
+    margin: 20px 30px 10px;
+  }
+
+  /* carousel section */
+  .main__carousel {
+    width: 95%;
+  }
+
+  .carousel {
+    height: auto;
+    flex-direction: column;
+  }
+
+  .carousel>img {
+    border-radius: 100%;
+    margin-bottom: 20px;
+    width: 140px;
+    height: 140px;
+  }
+
+  .carousel>div {
+    padding: 30px 20px;
+    width: 100%;
+    border-radius: 10px;
+  }
+
+  .carousel>div>h1 {
+    font-size: 1.1rem;
+    text-align: justify;
+  }
+
+  .carousel>div>p {
+    margin-top: 20px;
+  }
+
+  /* similar section */
+  .similar__section {
+    margin: 50px auto;
+  }
+
+  .similar__section__heading {
+    font-size: 1.8rem;
+  }
+
+  /* sell faq top banner */
+  .sell__faq__top__banner>h1 {
+    font-size: 2rem;
+  }
+}
+
+/* 360px */
+@media only screen and (max-width: 360px) {
+
+  /* main section carousel */
+  .main__section__carousel>h1 {
+    /* margin-bottom: 30px; */
+    font-size: 1.7rem;
+  }
+
+  /* scrap section */
+  .scrap__section {
+    padding: 20px 0 0;
+  }
+
+  /* scrap section card */
+  .scrap__section__card {
+    width: 75%;
+  }
+
+  /* modal */
+  .modal__content {
+    padding: 20px;
+  }
+
+  /* carousel section */
+  .carousel__section {
+    margin: 0 0 70px;
+  }
+
+  .carousel {
+    height: auto;
+  }
+
+  .carousel>img {
+    width: 130px;
+    height: 130px;
+  }
+
+  .carousel>div {
+    padding: 20px;
+  }
+
+  /* sell faq top banner */
+  .sell__faq__top__banner>h1 {
+    font-size: 1.7rem;
+    padding: 10px;
+  }
+}

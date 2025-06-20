@@ -1,0 +1,72 @@
+/* top banner */
+.join__us__top__banner {
+  background-image: url('/Image/banner2.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 400px;
+  padding: 30px 70px;
+  color: #fff;
+  clip-path: polygon(0 0, 100% 0, 100% 50%, 50% 100%, 0 50%);
+  text-align: center;
+}
+.join__us__top__banner > h1 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+.join__us__top__banner > p {
+  font-size: 1.7rem;
+  line-height: 1.3;
+  margin: 0 auto 25px;
+  /* font-family: "WindSong", cursive; */
+}
+.join__us__top__banner > span {
+  color: #56b124;
+  font-size: 1.1rem;
+}
+
+/* 1024px */
+@media only screen and (max-width: 1024px) {
+  /* top banner */
+  .join__us__top__banner {
+    height: 430px;
+  }
+}
+
+/* 768px */
+@media only screen and (max-width: 768px) {
+  /* top banner */
+  .join__us__top__banner {
+    clip-path: none;
+  }
+  .join__us__top__banner > p {
+    font-size: 1.55rem;
+  }
+}
+
+/* 480px */
+@media only screen and (max-width: 480px) {
+  /* top banner */
+  .join__us__top__banner {
+    padding: 20px 15px;
+    height: 400px;
+  }
+  .join__us__top__banner > h1 {
+    font-size: 2.2rem;
+  }
+  .join__us__top__banner > p {
+    font-size: 1.5rem;
+  }
+}
+
+/* 360px */
+@media only screen and (max-width: 360px) {
+  /* top banner */
+  .join__us__top__banner {
+    padding: 20px 10px;
+  }
+  .join__us__top__banner > p {
+    font-size: 1.4rem;
+  }
+}

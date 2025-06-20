@@ -1,0 +1,143 @@
+.user__profile__searchbar {
+  width: 100%;
+  background-image: url('/Image/banner3.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  /* justify-content: space-between; */
+  justify-content: flex-end;
+  padding: 50px;
+  /* border: 2px solid red; */
+}
+.user__profile__searchbar > .searchbar {
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  border-radius: 50px;
+  max-width: 550px;
+}
+.user__profile__searchbar > .searchbar > input {
+  width: 90%;
+  border: none;
+  outline: none !important;
+  padding: 13px 20px;
+  border-radius: 50px;
+  font-size: 1rem;
+}
+.user__profile__searchbar > .searchbar > .MuiSvgIcon-root {
+  color: #56b124;
+  font-size: 1.7rem;
+  cursor: pointer;
+  
+}
+.user__profile__searchbar > .profile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 50px;
+  height: 2rem;
+  /* border: 2px solid green; */
+
+}
+.user__profile__searchbar > .profile > p,
+.user__profile__searchbar > .profile > div > .profile__icon,
+.user__profile__searchbar > .profile > div > .cart__icon {
+  margin: -5px 25px;
+  /* border: 2px solid red; */
+}
+.user__profile__searchbar > .profile > p {
+  color: #fff;
+  font-size: 1.2rem;
+  text-align: left;
+}
+.user__profile__searchbar > .profile > div {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+}
+.user__profile__searchbar > .profile > div > .profile__icon,
+.user__profile__searchbar > .profile > div > .cart__icon {
+  color: #56b124;
+}
+.user__profile__searchbar > .profile > div > .profile__icon > .MuiSvgIcon-root,
+.user__profile__searchbar > .profile > div > .cart__icon > .MuiSvgIcon-root {
+  font-size: 2rem;
+}
+
+/* 1024px */
+@media only screen and (max-width: 1024px) {
+  .user__profile__searchbar {
+    padding: 50px 30px;
+  }
+  .user__profile__searchbar > .searchbar {
+    width: 45%;
+  }
+  .user__profile__searchbar > .profile > p {
+    font-size: 1 rem;
+  }
+}
+
+/* 768px */
+@media only screen and (max-width: 768px) {
+  .user__profile__searchbar {
+    flex-direction: column;
+  }
+  .user__profile__searchbar > .searchbar {
+    width: 80%;
+  }
+  .user__profile__searchbar > .profile {
+    margin-left: 0;
+    width: 100%;
+    margin-top: 2rem;
+    /* border: 2px solid yellow; */
+    /* margin-top: 50px; */
+  }
+}
+
+/* 480px */
+@media only screen and (max-width: 480px) {
+  .user__profile__searchbar > .searchbar {
+    width: 100%;
+  }
+  .user__profile__searchbar > .searchbar > input {
+    padding: 11px 20px;
+  }
+  .user__profile__searchbar > .profile {
+    flex-direction: column;
+    align-items: center;
+    margin-top:3rem;
+    justify-content: center;
+    /* margin-top: 35px; */
+  }
+  .user__profile__searchbar > .profile > div {
+    margin-top: 30px;
+  }
+  .user__profile__searchbar > .profile > p,
+  .user__profile__searchbar > .profile > div > .profile__icon,
+  .user__profile__searchbar > .profile > div > .cart__icon {
+    margin: 0;
+  }
+  .user__profile__searchbar > .profile > div > .profile__icon,
+  .user__profile__searchbar > .profile > div > .cart__icon {
+    margin-right: 30px;
+  }
+  .user__profile__searchbar
+    > .profile
+    > div
+    > .profile__icon
+    > .MuiSvgIcon-root,
+  .user__profile__searchbar > .profile > div > .cart__icon > .MuiSvgIcon-root {
+    font-size: 1.8rem;
+  }
+}
+
+/* 360px */
+@media only screen and (max-width: 360px) {
+  .user__profile__searchbar {
+    padding: 40px 20px;
+  }
+}

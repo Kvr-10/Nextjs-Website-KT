@@ -1,0 +1,29 @@
+Your setup now includes:
+
+CSS in src/app/styles/
+
+PNGs in public/Image/ (accessed via /Image/...)
+
+
+import '@/app/styles/AboutWorkCard.css';
+
+
+
+import { usePathname } from 'next/navigation'
+import Navbar from '@/components/Navbar'
+import MainFooter from '@/components/Footer/MainFooter';
+import TermFooter from '@/components/Footer/TermFooter';
+
+
+
+import Navbar from '@/components/Navbar';
+import AboutWorkCard from '@/app/(public)/About/AboutWorkCard';
+import { AboutWorkDetails } from '@/app/(public)/About/AboutWorkDetails';
+
+
+
+import { apiUrl } from '@/lib/Private';
+.get(`${apiUrl}/v3/WebsiteContent/working-team-members/`)
+
+
+import { stepReducerActions } from '@/Redux/stepReducer';

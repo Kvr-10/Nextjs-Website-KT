@@ -1,0 +1,107 @@
+.dealer__profile__searchbar {
+  width: 100%;
+  background-image: url(../Image/banner3.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px;
+}
+.dealer__profile__searchbar > .logo {
+  width: 190px;
+}
+.dealer__profile__searchbar > .logo > img {
+  width: 100%;
+}
+.dealer__profile__searchbar > .searchbar {
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  border-radius: 50px;
+  max-width: 550px;
+}
+.dealer__profile__searchbar > .searchbar > input {
+  width: 90%;
+  border: none;
+  outline: none !important;
+  padding: 13px 20px;
+  border-radius: 50px;
+  font-size: 1rem;
+}
+.dealer__profile__searchbar > .searchbar > .MuiSvgIcon-root {
+  color: #56b124;
+  font-size: 1.7rem;
+  cursor: pointer;
+}
+.dealer__profile__searchbar > p {
+  color: #fff;
+  font-size: 1.2rem;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.dealer__profile__searchbar > p > .MuiSvgIcon-root {
+  font-size: 2rem;
+  color: #56b124;
+  margin-left: 30px;
+}
+
+/* 1024px */
+@media only screen and (max-width: 1024px) {
+  .dealer__profile__searchbar {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .dealer__profile__searchbar > .searchbar {
+    width: 60%;
+    margin: 40px 0 30px;
+  }
+  .dealer__profile__searchbar > p {
+    margin-top: 40px;
+  }
+}
+
+/* 768px */
+@media only screen and (max-width: 768px) {
+  .dealer__profile__searchbar > .logo {
+    width: 170px;
+  }
+  .dealer__profile__searchbar > .searchbar {
+    width: 80%;
+  }
+}
+
+/* 480px */
+@media only screen and (max-width: 480px) {
+  .dealer__profile__searchbar {
+    padding: 50px 30px;
+  }
+  .dealer__profile__searchbar > .logo {
+    width: 160px;
+  }
+  .dealer__profile__searchbar > .searchbar {
+    width: 100%;
+  }
+  .dealer__profile__searchbar > .searchbar > input {
+    padding: 11px 20px;
+  }
+  .dealer__profile__searchbar > p > .MuiSvgIcon-root {
+    font-size: 1.8rem;
+    margin-left: 20px;
+  }
+}
+
+/* 360px */
+@media only screen and (max-width: 360px) {
+  .dealer__profile__searchbar {
+    padding: 40px 20px;
+  }
+  .dealer__profile__searchbar > .logo {
+    width: 150px;
+  }
+}

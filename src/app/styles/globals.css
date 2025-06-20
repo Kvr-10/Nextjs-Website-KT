@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden; /* Keep this for safety */
+}
+
+nav {
+  background-color: #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.nav-container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0.8rem 1.5rem;
+  overflow-x: hidden;
+}
+
+.nav-content {
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap on small screens */
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: #1a202c;
+  white-space: nowrap;
+}
+
+.logo-accent {
+  color: #3182ce;
+}
+
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #b3c3df;
+  font-weight: 500;
+  padding: 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #2b6cb0;
+}
+
+.nav-link.active {
+  color: #2b6cb0;
+  border-bottom: 2px solid #2b6cb0;
+}
+
+footer {
+  background-color: #4d5057;
+  color: #cbd5e0;
+  padding: 2rem 1rem;
+  text-align: center;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+footer .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 1rem;
+}
+
+footer p {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+footer a {
+  color: #cbd5e0;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #68d391;
+}
+
+footer .flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+    display: none; /* or toggle with JS */
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

@@ -1,0 +1,10 @@
+/* dashboard */
+.dealer__home > .dashboard {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  max-width: 1500px;
+  margin: auto;
+  width: 100%;
+}
