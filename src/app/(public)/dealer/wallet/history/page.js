@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react';
 import DealerProfileSearchbar from '@/components/DealerProfileSearchbar';
 import DealerProfileNavbar from '@/components/DealerProfileNavbar';
-import WalletHistoryCard from '@/components/Wallet/WalletHistoryCard';
+import WalletHistoryCard from '@/components/wallet/WalletHistoryCard';
 
 import { WalletHistoryData } from '@/data/WalletHistoryData';
 import '@/app/styles/UserDealerWalletHistory.css';
