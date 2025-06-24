@@ -1,7 +1,7 @@
 // src/components/About/AboutWorkDetails.js
 export const AboutWorkDetails = [
   {
-    title: "Hyperlocal11 Platform",
+    title: "Hyperlocal Platform",
     description:
       "A hyperlocal, technology-enabled, one-stop platform for the recycling industry",
   },
