@@ -37,50 +37,52 @@ export default function SignIn() {
 
   const showHidePassword = () => setShowPassword(!showPassword);
 
-  const login = async (e, usertype) => {
-    e.preventDefault();
-    const userType = usertype.charAt(0).toUpperCase() + usertype.slice(1).toLowerCase();
+const login = async (e, usertype) => {
+  e.preventDefault();
 
-    if (inputEmail !== '') {
-      const user = {
-        email: inputEmail,
-        password: inputPassword,
-        user_type: userType,
-      };
+  const userType = usertype.charAt(0).toUpperCase() + usertype.slice(1).toLowerCase(); // FIXED
 
-      try {
-        const res = await axios.post(`${apiUrl1}/v3/api/login/`, user);
+  if (inputEmail !== '') {
+    const user = {
+      email: inputEmail,
+      password: inputPassword,
+      user_type: userType, // Now it's correctly assigned
+    };
 
-        if (res.data.msg === "Account Does Not Exist.") {
-          Swal.fire({ title: "Account doesn't exist. Signup first.", confirmButtonColor: "#56b124" });
-        } else if (res.data.msg === "Your account is not verified yet. Plz verify it first.") {
-          await axios.post(`${apiUrl}/v3/api/regenerate-verification-email/${tabBtn}/`, {
-            email: inputEmail
-          });
-          Swal.fire({
-            title: "Activation link sent. Please verify your email.",
-            confirmButtonColor: "#56b124"
-          });
-        } else if (res.data.msg === "Incorrect password") {
-          Swal.fire({ title: "Invalid Credentials", confirmButtonColor: "#56b124" });
-        } else {
-          localStorage.setItem("KTMauth", JSON.stringify(res.data));
-          const infos = JSON.parse(localStorage.getItem("KTMauth"));
+try {
+  const res = await axios.post(`${apiUrl1}/v3/api/login/`, user);
+  console.log(res.data);
 
-          if (["Personal", "Organization"].includes(infos["account_type"])) {
-            router.push('/sell');
-          } else if (["Recycler", "Kabadi", "Collector"].includes(infos["account_type"])) {
-            router.push('/dealer/home');
-          }
-        }
-      } catch (err) {
-        console.error(err);
-        Swal.fire({ title: "Login Error!!", confirmButtonColor: "#56b124" }).then(() => {
-          location.reload();
-        });
-      }
+  if (res.data.msg === "Account Does Not Exist.") {
+    Swal.fire({ title: "Account doesn't exist. Signup first.", confirmButtonColor: "#56b124" });
+  } else if (res.data.msg === "Your account is not verified yet. Plz verify it first.") {
+   await axios.post(`${apiUrl1}/v3/api/login/`, user);
+    Swal.fire({
+      title: "Activation link sent. Please verify your email.",
+      confirmButtonColor: "#56b124"
+    });
+  } else if (res.data.msg === "Incorrect password") {
+    Swal.fire({ title: "Invalid Credentials", confirmButtonColor: "#56b124" });
+  } else {
+    localStorage.setItem("KTMauth", JSON.stringify(res.data));
+    const infos = JSON.parse(localStorage.getItem("KTMauth"));
+    Swal.fire({ title: "Login Successful", confirmButtonColor: "#56b124" });
+
+    if (["Personal", "Organization"].includes(infos["account_type"])) {
+      router.push('/sell');
+    } else if (["Recycler", "Kabadi", "Collector"].includes(infos["account_type"])) {
+      router.push('/dealer/home');
     }
-  };
+  }
+} catch (err) {
+  console.error(err);
+  Swal.fire({ title: "Account doesn't exist!!", confirmButtonColor: "#56b124" }).then(() => {
+    location.reload();
+  });
+}
+}
+};
+
 
   return (
     <>

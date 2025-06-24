@@ -1,10 +1,10 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
-import { Tooltip } from 'react-tooltip'; // Correct usage
+import { Tooltip } from 'react-tooltip';
 import 'react-tooltip/dist/react-tooltip.css';
 
 import '../app/styles/Navbar.css';
@@ -14,8 +14,15 @@ import CloseIcon from '@mui/icons-material/Close';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isClient, setIsClient] = useState(false);
+  const [apiKey, setApiKey] = useState(null);
   const pathname = usePathname();
-  const apiKey = typeof window !== 'undefined' ? localStorage.getItem("KTMauth") : null;
+
+  useEffect(() => {
+    setIsClient(true);
+    const stored = localStorage.getItem('KTMauth');
+    setApiKey(stored);
+  }, []);
 
   const navLinks = [
     { href: '/', label: 'ABOUT' },
@@ -33,25 +40,27 @@ const Navbar = () => {
           <Image src="/Image/kabadi__techno__logo.png" alt="Kabadi Techno" width={120} height={40} />
         </Link>
 
-        <ul className={isOpen ? "navlist navlist__active" : "navlist"}>
+        <ul className={isOpen ? 'navlist navlist__active' : 'navlist'}>
           {navLinks.map(({ href, label }) => (
             <li key={href}>
               <Link
                 href={href}
                 className={`navlink ${pathname === href ? 'active__navlink' : ''}`}
                 onClick={() => setIsOpen(false)}
-                data-tooltip-id={label === 'SIGN IN' && apiKey ? 'signedin-tip' : undefined}
+                {...(isClient && label === 'SIGN IN' && apiKey
+                  ? { 'data-tooltip-id': 'signedin-tip' }
+                  : {})}
               >
                 {label}
               </Link>
             </li>
           ))}
-          {apiKey && (
+          {isClient && apiKey && (
             <Tooltip
               id="signedin-tip"
               content="You are Signed In"
               place="bottom"
-              style={{ backgroundColor: "#44aa0e", color: "#fff" }}
+              style={{ backgroundColor: '#44aa0e', color: '#fff' }}
             />
           )}
         </ul>
