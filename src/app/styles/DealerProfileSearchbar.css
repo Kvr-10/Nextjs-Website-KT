@@ -1,6 +1,6 @@
 .dealer__profile__searchbar {
   width: 100%;
-  background-image: url(../Image/banner3.svg);
+  background-image: url('/Image/banner3.svg'); /* ✅ Correct */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
