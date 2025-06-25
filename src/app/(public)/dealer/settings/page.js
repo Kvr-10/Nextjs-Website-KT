@@ -32,7 +32,7 @@ const DealerSettings = () => {
       <div className="dealer__settings__section similar__section">
         <h1 className="similar__section__heading">Complete Your Profile</h1>
         <div className="settings__section">
-          <Link className="settings__link" href="/dealer/settings/documentupload">
+          <Link className="settings__link" href="/dealer/settings/documents">
             <span>
               <DescriptionIcon />
               <p>Documents Upload</p>

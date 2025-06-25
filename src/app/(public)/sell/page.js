@@ -13,8 +13,7 @@ import SellFaqTopBanner from '@/components/SellFaqTopBanner';
 import UserProfileSearchbar from '@/components/UserProfileSearchbar';
 import ChangePincode from '@/components/ChangePincode';
 import SellCard from '@/app/(public)/sell/SellCard';
-import MainFooter from '@/components/Footer/MainFooter';
-import TermFooter from '@/components/Footer/TermFooter';
+
 
 // Styles
 import '@/app/styles/Sell.css';
