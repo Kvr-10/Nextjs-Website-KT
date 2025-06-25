@@ -1,4 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+/* src/app/globals.css */
+@import url("https://fonts.googleapis.com/css2?family=Happy+Monkey&family=Pacifico&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+ @import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
+/* Your other styles here */
 
 * {
   box-sizing: border-box;
