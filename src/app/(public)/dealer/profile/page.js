@@ -52,7 +52,7 @@ const DealerProfile = () => {
             <p>Address: <a className="view__address">View your address</a></p>
 
             <div className="document__qr">
-              <a className="user__dealer__profile__document__qr__link" href="/dealer/settings/documentupload">
+              <a className="user__dealer__profile__document__qr__link" href="/dealer/settings/documents">
                 Documents
               </a>
               <a className="user__dealer__profile__document__qr__link" href="/dealer/profile/qr">

@@ -5,7 +5,6 @@ import axios from 'axios';
 import { apiUrl } from '@/lib/Private';
 
 // Components
-import Navbar from '@/components/Navbar';
 import UserProfileSearchbar from '@/components/UserProfileSearchbar';
 import UserProfileNavbar from '@/components/User/UserProfileNavbar';
 

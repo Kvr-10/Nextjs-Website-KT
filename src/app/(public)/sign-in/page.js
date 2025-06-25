@@ -64,15 +64,32 @@ try {
   } else if (res.data.msg === "Incorrect password") {
     Swal.fire({ title: "Invalid Credentials", confirmButtonColor: "#56b124" });
   } else {
-    localStorage.setItem("KTMauth", JSON.stringify(res.data));
-    const infos = JSON.parse(localStorage.getItem("KTMauth"));
+const normalizedKTMauth = {
+  id: res.data.user.id,
+  KT_ID: res.data.user.KT_ID || null, // optional fallback
+  username: res.data.user.username || res.data.user.full_name,
+  account_type: res.data.user.account_type,
+  mobile_number: res.data.user.phone_number,
+  tokens: {
+    refresh: res.data.token.refresh,
+    access: res.data.token.access,
+  },
+};
+    console.log("Saved KTMauth:", normalizedKTMauth);
+    localStorage.setItem("KTMauth", JSON.stringify(normalizedKTMauth));
     Swal.fire({ title: "Login Successful", confirmButtonColor: "#56b124" });
+    
+const userType = normalizedKTMauth["account_type"]?.toLowerCase();
 
-    if (["Personal", "Organization"].includes(infos["account_type"])) {
-      router.push('/sell');
-    } else if (["Recycler", "Kabadi", "Collector"].includes(infos["account_type"])) {
-      router.push('/dealer/home');
-    }
+if (userType === "personal" || userType === "organization" || userType === "customer") {
+  router.push("/sell/user");
+} else if (["recycler", "kabadi", "collector", "dealer"].includes(userType)) {
+  router.push("/dealer/home");
+} else {
+  // fallback route (optional)
+  router.push("/");
+}
+
   }
 } catch (err) {
   console.error(err);
