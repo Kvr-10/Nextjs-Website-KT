@@ -48,7 +48,7 @@ const UserProfileNavbar = () => {
       localStorage.removeItem('KTMpincode');
       localStorage.removeItem('KTMsellItemName');
 
-      router.push('/signin');
+      router.push('/sign-in');
     } catch (err) {
       console.error(err);
       if (err.response?.status === 401) {
@@ -57,7 +57,7 @@ const UserProfileNavbar = () => {
         localStorage.removeItem('KTMauth');
         localStorage.removeItem('KTMpincode');
         localStorage.removeItem('KTMsellItemName');
-        router.push('/signin');
+        router.push('/sign-in');
       }
     }
   };
