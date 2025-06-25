@@ -6,12 +6,11 @@ import Swal from 'sweetalert2';
 import axios from 'axios';
 
 // Components
-import Navbar from '@/components/Navbar';
-import UserProfileSearchbar from '@/components/User/UserProfileSearchbar';
+
+import UserProfileSearchbar from '@/components/UserProfileSearchbar';
 import UserProfileNavbar from '@/components/User/UserProfileNavbar';
 import UserAutoScrapCard from '@/components/User/UserAutoScrapCard';
-import MainFooter from '@/components/Footer/MainFooter';
-import TermFooter from '@/components/Footer/TermFooter';
+
 
 // Styles
 import '@/app/styles/App.css';
@@ -40,7 +39,7 @@ const UserAutoScrap = () => {
 
   return (
     <>
-      <Navbar />
+
       <UserProfileSearchbar />
       <UserProfileNavbar />
 
@@ -84,8 +83,6 @@ const UserAutoScrap = () => {
         </Modal>
       </div>
 
-      <MainFooter />
-      <TermFooter />
     </>
   );
 };

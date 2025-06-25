@@ -4,12 +4,11 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
 // Components
-import Navbar from '@/components/Navbar';
+
 import UserProfileSearchbar from '@/components/UserProfileSearchbar';
 import UserProfileNavbar from '@/components/User/UserProfileNavbar';
 import UserPickupCard from '@/components/User/UserPickupCard';
-import MainFooter from '@/components/Footer/MainFooter';
-import TermFooter from '@/components/Footer/TermFooter';
+
 
 // Styles
 import '@/app/styles/UserDealerPickup.css';
@@ -43,7 +42,7 @@ const UserPickup = () => {
 
   return (
     <>
-      <Navbar />
+  
       <UserProfileSearchbar />
       <UserProfileNavbar />
 
@@ -68,8 +67,6 @@ const UserPickup = () => {
         </div>
       </div>
 
-      <MainFooter />
-      <TermFooter />
     </>
   );
 };

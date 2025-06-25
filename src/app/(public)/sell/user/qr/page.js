@@ -8,8 +8,6 @@ import { apiUrl } from '@/lib/Private';
 import Navbar from '@/components/Navbar';
 import UserProfileSearchbar from '@/components/UserProfileSearchbar';
 import UserProfileNavbar from '@/components/User/UserProfileNavbar';
-import MainFooter from '@/components/Footer/MainFooter';
-import TermFooter from '@/components/Footer/TermFooter';
 
 // Styles
 import '@/app/styles/UserDealerQR.css';
@@ -45,7 +43,7 @@ const UserQR = () => {
 
   return (
     <>
-      <Navbar />
+
       <UserProfileSearchbar />
       <UserProfileNavbar />
 
@@ -61,8 +59,7 @@ const UserQR = () => {
         </div>
       )}
 
-      <MainFooter />
-      <TermFooter />
+  
     </>
   );
 };
