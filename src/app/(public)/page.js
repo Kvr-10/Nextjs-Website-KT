@@ -60,6 +60,18 @@ const HomePage = () => {
       para: "L-G Saxena-headed panel orders to start early morning waste collection in Delhi",
       year: "2019",
     },
+       {
+      id: 2,
+      img: '/Images/idea2.png',
+      para: "L-G Saxena-headed panel orders to start early morning waste collection in Delhi",
+      year: "2019",
+    },
+    {
+      id: 3,
+      img: '/Images/idea3.png',
+      para: "L-G Saxena-headed panel orders to start early morning waste collection in Delhi",
+      year: "2019",
+    },
     // ... same structure
   ];
 
@@ -67,9 +79,18 @@ const HomePage = () => {
     {
       id: 1,
       img: '/Images/update1.png',
-      para: "Unscientific handling of solid waste in Ludhiana...",
+      para: "Unscientific handling of solid waste in Ludhiana: NGT orders authorities to lift waste within two months, submit action taken report.",
     },
-    // ... same structure
+    {
+      id: 2,
+      img: '/Images/update2.png',
+      para: "Unscientific handling of solid waste in Ludhiana: NGT orders authorities to lift waste within two months, submit action taken report.",
+    },
+    {
+      id: 3,
+      img: '/Images/update3.png',
+      para: "Unscientific handling of solid waste in Ludhiana: NGT orders authorities to lift waste within two months, submit action taken report.",
+    },
   ];
 
   const project = [
@@ -79,7 +100,18 @@ const HomePage = () => {
       heading: "Project A",
       para: "Young boy from slum takes the waste world by storm...",
     },
-    // ... same structure
+    {
+      id: 2,
+      img: '/Images/project2.png',
+      heading: "Project B",
+      para: "Read more at mesofindia.indiatimes.com/articleshow/90541213.cms?utm_source=contentofinterest&utm_medium=text&utm_campaign=cppstwaste warriors ",
+    },
+    {
+      id: 3,
+      img: '/Images/project1.png',
+      heading: "Project C",
+      para: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap ",
+    },
   ];
 
   return (
@@ -259,13 +291,13 @@ const HomePage = () => {
 
           src="/images/bg_image1.png"
           className="bg_image1"
-          alt=""
+          alt="AAAAA"
         />
         <img
 
           src="/images/bg_image2.png"
           className="bg_image2"
-          alt=""
+          alt="AAAAA"
         />
       </div>
       <div className="main_plantContainer__home_page__">
@@ -387,8 +419,10 @@ const HomePage = () => {
         <div className="wasteCard__home_page">
           {/*map function */}
           <div className="wasteCards__home_page">
+            
 
             <img src="/Images/plastic.png" />
+            <h1>Plastic Waste</h1>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="517"
@@ -405,6 +439,7 @@ const HomePage = () => {
           <div className="wasteCards__home_page">
 
             <img src="/Images/plastic.png" />
+            <h1>Rock paper scissors</h1>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="517"
@@ -589,18 +624,15 @@ const HomePage = () => {
               challenges of waste management and build a brighter future for
               generations to come.
             </p>
-            <div className="support_button__home_page">
-              <Link href="/donation">
-                <span className="button__home_page">
+              <div className="support_button__home_page">
+                <Link href="/donation" className="button__home_page">
                   Monetary Donation
-                </span>
-              </Link>
+                </Link>
 
-              <Link href="/Wastedonation">
-                {" "}
-                <span className="button__home_page">Waste Donation</span>
-              </Link>
-            </div>
+                <Link href="/Wastedonation" className="button__home_page">
+                  Waste Donation
+                </Link>
+              </div>
             <p>7,803 people have donated!</p>
           </div>
         </div>

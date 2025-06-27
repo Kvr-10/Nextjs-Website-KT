@@ -25,7 +25,8 @@ const Navbar = () => {
   }, []);
 
   const navLinks = [
-    { href: '/', label: 'ABOUT' },
+    { href: '/', label: 'HOME' },
+    { href: '/About', label: 'ABOUT' },
     { href: '/join-us', label: 'JOIN US' },
     { href: '/sell', label: 'SELL' },
     { href: '/faq', label: 'FAQ' },
