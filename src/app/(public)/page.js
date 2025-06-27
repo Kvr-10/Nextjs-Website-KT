@@ -133,8 +133,9 @@ const HomePage = () => {
               <Link href="/About">
                 <span className="button__home_page">About Us</span>
               </Link>
-
-              <button className="button__home_page">More Info</button>
+              <Link href="/join-us">
+                <button className="button__home_page">More Info</button>
+              </Link>
               <a
                 href="https://docs.google.com/forms/d/e/1FAIpQLSd6euQZhe1-EvZH9U8IY5bdCDlCl2O82lOYdLRTcRneR46mqA/viewform"
                 target="_blank"
