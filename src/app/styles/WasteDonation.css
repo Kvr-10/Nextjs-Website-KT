@@ -1,0 +1,238 @@
+.donationDone {
+    background-image: url(/Images/extra.png);
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 50px 0px;
+  }
+  .secondWasteDonation {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+  }
+  .wastedonationImage {
+    width: 35%;
+  }
+  .wastedonationCircularImage {
+    width: 100%;
+  }
+  .wastedonationCircularImage > img {
+    width: 100%;
+  }
+  .rectangle-270-block2 {
+    background: #002a28;
+    border-radius: 191px 191px 7px 7px;
+    min-height: 550px;
+    width: 100%;
+    margin-top: -200px;
+    display: flex;
+    justify-content: center;
+  }
+  .rectangle-270-block2 > div {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    margin-top: 200px;
+  
+  }
+  .rectangle-270-block2 > div > p {
+    color: #ffffff;
+    text-align: left;
+    font-family: "Inter-Medium", sans-serif;
+    font-size: 20px;
+    margin: 0px;
+    line-height: 174.52%;
+    font-weight: 500;
+  }
+  .rectangle-270-block2 > div > p:first-child {
+    color: #ffffff;
+    text-align: center;
+    font-family: "SegoeUi-Semibold", sans-serif;
+    font-size: 32px;
+    font-weight: 600;
+  }
+  .rectangle-270-block2 > div > div {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  .kabadiDonation {
+    color: #f8f8f8;
+    text-align: center;
+    font-family: "SegoeUi-Regular", sans-serif;
+    font-size: 14px;
+    line-height: 162.02%;
+    font-weight: 400;
+      margin-bottom: 0px;
+    width: 277px;
+    height: 34px;
+  }
+  .paraDonation {
+    color: #e17f0b;
+    text-align: center;
+    font-family: "SegoeUi-Regular", sans-serif;
+    font-size: 14px;
+    line-height: 162.02%;
+    font-weight: 400;
+    text-decoration: underline;
+    width: 115px;
+    height: 18px;
+    margin-top: 0px;
+  }
+  .donationHeading {
+    width: 55%;
+    display: flex;
+    align-items: flex-end;
+  }
+  .donationHeading > p {
+    color: #ffffff;
+    text-align: left;
+    font-family: "SegoeUi-Bold", sans-serif;
+    font-size: 40px;
+    line-height: 142.02%;
+    font-weight: 700;
+    margin: 0px;
+  }
+  
+  /* media query */
+  
+  @media (max-width:960px) {
+    .donationHeading {
+      width: 50%;
+    }
+    .wastedonationImage{
+      width: 45%;
+    }
+    .donationHeading > p{
+      font-size: 30px;
+    }
+  }
+  
+  @media (max-width:768px){
+    .secondWasteDonation{
+      
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center;
+      justify-content: center;
+      /* color: black; */
+    }
+    .wastedonationImage{
+      background: #002a28;
+      border-radius: 10px 10px 10px 10px;
+      display: flex;
+      width: 100%;
+      padding: 10px 0px;
+      /* background: greenyellow; */
+      align-items: center;
+      flex-direction: column;
+    }
+    .wastedonationCircularImage{
+      width: 35%;
+      z-index: 1;
+    }
+    .rectangle-270-block2{
+      border-radius: 0px;
+          min-height: unset;
+          margin-top: unset;
+    }
+    .rectangle-270-block2>div{
+      margin-top: 0px;
+    }
+    .donationHeading{
+      width: 100%;
+      /* color: black; */
+    }
+    .donationHeading>p{
+      color: grey;
+    }
+  }
+  
+  @media (max-width:600px) {
+    .secondWasteDonation{
+      width: 90%;
+    }
+    .donationHeading > p {
+      font-size: 25px;
+  }
+  .wastedonationImage{
+    margin-top: 10px;
+  }
+  }
+  @media (max-width:480px){
+    .donationHeading > p {
+      font-size: 20px;
+  }
+   .rectangle-270-block2 > div > p:first-child {
+    font-size: 25px;
+  }
+  .rectangle-270-block2>div>div{
+    margin-top: 10px;
+  }
+  }
+  
+  
+  
+  
+  
+  /* .block2{
+  height: 600px;
+  position: unset;
+  }
+  .rectangle-270 > div {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    top: 200px;
+    position: relative;
+  }
+  .rectangle-270>div>p:first-child{
+    color: #ffffff;
+    text-align: center;
+    font-family: "SegoeUi-Semibold", sans-serif;
+    font-size: 32px;
+    font-weight: 600;
+    position: relative;
+  }
+  
+  .rectangle-270 > div > p {
+    color: #ffffff;
+    text-align: left;
+    font-family: "Inter-Medium", sans-serif;
+    font-size: 20px;
+    margin: 0px;
+    line-height: 174.52%;
+    font-weight: 500;
+  }
+  .rectangle-270 > div > div {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .rectangle-270 > div > div > img {
+    width: 20%;
+  }
+  
+  
+  .secondDivDonation{
+      display: flex;
+      width: 80%;
+      margin: auto;
+      justify-content: space-between;
+  }
+  
+  .donationHeading{
+      width: 55%;
+      display: flex;
+      justify-content: end;
+      align-items: end;
+  }
+   */
+  

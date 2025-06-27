@@ -22,10 +22,7 @@
     background: linear-gradient(180deg, #98b3c6 3.35%, #05242a 75.59%);
   }
   
-  /* HERO SECTION */
-  .area__section__ {
-  }
-  
+
   .hero__section__ {
     width: 100%;
   }
@@ -94,8 +91,7 @@
   }
   
   /* AREA SECTION */
-  .area__section__ {
-  }
+
   
   
   .area__section__ {
@@ -259,8 +255,7 @@
   }
   
   /* PRODUCT SECTION */
-  .area__section__ {
-  }
+  
   
   .mp_sell {
     width: 100%;
@@ -555,8 +550,8 @@
   }
   
   /* INITIATIVE */
-  .area__section__ {
-  }
+ 
+
   
   .mp_Initiatives_container {
     width: 100%;

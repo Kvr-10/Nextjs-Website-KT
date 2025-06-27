@@ -1,279 +1,638 @@
 'use client';
 
 import React, { useEffect, useState } from "react";
-import Link from "next/link";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
-import "@splidejs/splide/dist/css/themes/splide-default.min.css";
-import axios from "axios";
-import Modal from "react-modal";
-import Swal from "sweetalert2";
+import "@splidejs/react-splide/css";
 
-// CSS
-import '@/app/styles/About.css';
-import '@/app/styles/App.css';
-
+import Link from "next/link";
+import Image from "next/image";
 
 // Components
-import Navbar from '@/components/Navbar';
-import AboutWorkCard from '@/app/(public)/About/AboutWorkCard';
-import { AboutWorkDetails } from '@/app/(public)/About/AboutWorkDetails';
+import Navbar from "@/components/Navbar";
+import MainFooter from "@/components/Footer/MainFooter";
+import TermFooter from "@/components/Footer/TermFooter";
 
-import MainFooter from '@/components/Footer/MainFooter';
-import TermFooter from '@/components/Footer/TermFooter';
+// Styles
+import "@/app/styles/HomePage.css";
 
 
-// API
-import { apiUrl } from '@/lib/Private'; // ✅ Updated path
-
-const Home = () => {
-  const [aboutWorkDetails] = useState(AboutWorkDetails);
-  const [teamMember, setTeamMember] = useState([]);
-
-  const [numVotes, setnumVotes] = useState(0);
-  const [numYes, setnumYes] = useState(0);
-  const [numNo, setnumNo] = useState(0);
-  const [isOpen, setIsOpen] = useState(false);
-  const [inputValue, setInputValue] = useState({
-    name: "",
+const HomePage = () => {
+  const [active, setActive] = useState(true);
+  const [formValues, setFormValues] = useState({});
+  const [formValuess, setFormValuess] = useState({
+    fullName: "",
+    number: "",
     email: "",
-    phone: "",
+    company: "",
+    city: "",
     message: "",
   });
 
   useEffect(() => {
-    axios
-      .get(`${apiUrl}/v3/WebsiteContent/team-members/`)
-      .then((response) => setTeamMember(response.data))
-      .catch(console.error);
+    window.scrollTo(0, 0);
   }, []);
 
-  useEffect(() => {
-    getVote();
-  }, []);
+  const plant = [
+    {
+      id: 1,
+      img: '/Images/plant1.png',
+      heading: "Vermigold EcoTech",
+      para: "One of the top recycling plants in India...",
+    },
+    {
+      id: 2,
+      img: '/Images/plant2.png',
+      heading: "Let’s Recycle",
+      para: "One of the top recycling plants in India...",
+    },
+    {
+      id: 3,
+      img: '/Images/plant3.png',
+      heading: "Attero",
+      para: "One of the top recycling plants in India...",
+    },
+  ];
 
-  const getVote = async () => {
-    try {
-      const response = await axios.get(`${apiUrl}/votes/get-votes/1/`);
-      const data = response.data;
-      setnumVotes(Number(data["yes_count"] + Number(data["no_count"])));
-      setnumNo(Number(data["no_count"]));
-      setnumYes(Number(data["yes_count"]));
-    } catch (error) {
-      console.error(error);
-    }
-  };
+  const ideas = [
+    {
+      id: 1,
+      img: '/Images/idea1.png',
+      para: "L-G Saxena-headed panel orders to start early morning waste collection in Delhi",
+      year: "2019",
+    },
+    // ... same structure
+  ];
 
-  const postVote = async (e, votes) => {
-    setIsOpen(true);
-    try {
-      const ip = await axios.get(`https://api.ipify.org/?format=json`);
-      const votedata = {
-        vote: 1,
-        status: votes,
-        ip: ip.data.ip,
-      };
+  const update = [
+    {
+      id: 1,
+      img: '/Images/update1.png',
+      para: "Unscientific handling of solid waste in Ludhiana...",
+    },
+    // ... same structure
+  ];
 
-      const response = await axios.post(`${apiUrl}/votes/post-votes/`, votedata, {
-        headers: { "Content-Type": "multipart/form-data" },
-      });
-
-      const voteMsg = response.data["Your Voting Choice was : "];
-      Swal.fire({
-        title: voteMsg
-          ? `${response.data.unsuccessful}\nYour Voting Choice was: ${voteMsg}`
-          : "Thank you for voting.",
-        title: "Thank you for voting111.", // Something is worng here
-        confirmButtonColor: "#56b124",
-      });
-    } catch (error) {
-      Swal.fire({
-        title: "There was an error posting your vote. Please try again later.",
-        confirmButtonColor: "#56b124",
-      });
-    }
-  };
-
-  const getInputValue = (e) => {
-    setInputValue({ ...inputValue, [e.target.name]: e.target.value });
-  };
-
-  const voteSuggestion = async () => {
-    const { name, email, phone, message } = inputValue;
-    if (
-      name &&
-      email &&
-      phone &&
-      phone.length === 10 &&
-      !isNaN(phone) &&
-      message
-    ) {
-      try {
-        const data = new FormData();
-        data.append("name", name);
-        data.append("email", email);
-        data.append("phone", phone);
-        data.append("message", message);
-
-        await axios.post(`${apiUrl}/v3/WebsiteContent/suggestion-form/`, data, {
-          headers: { "Content-Type": "multipart/form-data" },
-        });
-
-        setInputValue({ name: "", email: "", phone: "", message: "" });
-        setIsOpen(false);
-      } catch (err) {
-        Swal.fire({
-          title: "Please enter a valid email.",
-          confirmButtonColor: "#56b124",
-        });
-      }
-    } else {
-      Swal.fire({
-        title: "Please enter valid fields.",
-        confirmButtonColor: "#56b124",
-      });
-    }
-  };
+  const project = [
+    {
+      id: 1,
+      img: '/Images/project1.png',
+      heading: "Project A",
+      para: "Young boy from slum takes the waste world by storm...",
+    },
+    // ... same structure
+  ];
 
   return (
     <>
 
-
-      <div className="main__section">
-        <div className="about__top__banner">
-          <h1>ABOUT US</h1>
-          <p> We are a hyperlocal platform to connect the waste producers to the
-            waste collectors. Individuals, households, organisations, and
-            dealers like Kabadiwalas, collectors, and recyclers all come
-            together on a unified online platform. Here, a customer can easily
-            find their nearest Kabadiwala and place an order for doorstep waste
-            pickup.</p>
-          <p> By leveraging AI, IoT, and IT in the waste management sector, We aim
-            to help small local Kabadiwalas grow their businesses with the help
-            of technology. By offering a modern solution to treat & manage
-            waste, we enable our partners to collect waste efficiently with
-            fewer resources.</p>
-        </div>
-
-        <div className="goal__section">
-          <div className="goal" id="ourvision">
-            <h1>Our Vision</h1>
-            <p> Our vision is a world of sustainable consumption and a circular
-              economy. We envision becoming a global one-stop shop for the
-              recycling and upcycling industry.</p>
-          </div>
-          <div className="goal" id="ourmission">
-            <p> Our mission is to establish a sustainable recyclable waste
-              management system and a clean and pollution-free country by
-              creating a hyperlocal platform connecting waste producers and
-              waste collectors.</p>
-            <h1>Our Mission</h1>
-          </div>
-        </div>
-
-        <div className="certificate__section">
-          <h1>Startup India Certificate</h1>
-          <img className="certificate" src="/Image/certificate_new.svg" alt="Certificate" />
-        </div>
-
-        <div className="work__section" id="whatwedo">
-          <h1>What We Do?</h1>
-          <div className="work">
-            {aboutWorkDetails.map((eachDetail, index) => (
-              <AboutWorkCard key={index} {...eachDetail} />
-            ))}
-          </div>
-        </div>
-
-        <div className="voting__section">
-          <h1>Your Vote is Valuable</h1>
-          <div className="voting">
-            <h1>
-               We’d love to hear your valuable suggestions! If you feel our
-              service adds value to your life, please click on “Yes, I need this
-              service”. If you feel you don’t require our services, please click
-              on “No, I don’t need this service”. Your response will help us
-              understand your requirements better. Please note that we don’t
-              collect email addresses by default. Please leave your contact
-              details or your suggestions after voting if you’re interested!
-            </h1>
-            <div className="vote__section">
-              <div className="vote">
-                <button onClick={(e) => postVote(e, "Yes")}>Yes, I need this service</button>
-                <p>{numYes}</p>
+      <div className="home_page">
+        <div className="heroSection__home_page__">
+          <div className="mainSection__home_page__">
+            <div className="mainSection_left__home_page__">
+              <div>
+                <blockquote>
+                  Our planet's alarm is going off, and it is time to wake up and take action!
+                  <br />
+                  <br /> ~Leonardo DiCaprio
+                </blockquote>
               </div>
-              <h1>
-                Total Vote<br /><span>{numVotes}</span>
-              </h1>
-              <div className="vote">
-                <button onClick={(e) => postVote(e, "No")}>No, I don't need this service</button>
-                <p>{numNo}</p>
-              </div>
+            </div>
+            <div className="mainSection_right__home_page__">
+              <Link href="/About">
+                <span className="button__home_page">About Us</span>
+              </Link>
+
+              <button className="button__home_page">More Info</button>
+              <a
+                href="https://docs.google.com/forms/d/e/1FAIpQLSd6euQZhe1-EvZH9U8IY5bdCDlCl2O82lOYdLRTcRneR46mqA/viewform"
+                target="_blank"
+              >
+                <button className="button__home_page">Survey</button>
+              </a>
             </div>
           </div>
         </div>
 
-        <div className="join__team__section">
-          <div className="left__side">
-            <h1>Join Our Team</h1>
+           {/* MESSAGE FOR KABADIWALA */}
+    <div className="Kabadiwala__home_page">
+      <div className="mainKabadiwala__home_page">
+        <div className="mainKabadiwalaLeft__home_page">
+          <div className="KabadiwalaButtons__home_page">
+            <div className="button outsideKabadiwalabtn__home_page">
+              <button
+                className={
+                  active
+                    ? "btn kabaadiwalabtn__home_page"
+                    : "btn collectorbtn__home_page"
+                }
+                onClick={() => setActive(!active)}
+              >
+                Kabaadiwaale
+              </button>
+            </div>
+            <div className="button outsideCollectorbtn__home_page">
+              <button
+                className={
+                  active
+                    ? "btn collectorbtn__home_page"
+                    : "btn kabaadiwalabtn__home_page"
+                }
+                onClick={() => setActive(!active)}
+              >
+                Collectors
+              </button>
+            </div>
           </div>
-          <div className="right__side">
-            <h1>J  Join us on our mission to revolutionise the waste management
-              industry</h1>
-            <Link href="/joinus" className="join__team__button">More Info</Link>
+          <div className="MessageKabadiwala__home_page">
+            <div className="headingMessageKabadiwala__home_page">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="58"
+                height="58"
+                viewBox="0 0 58 58"
+                fill="none"
+              >
+                <circle cx="29" cy="29" r="29" fill="#E17F0B" />
+              </svg>
+              <h1>Message for Kabaadiwaale</h1>
+            </div>
+
+            <div className="topMessage__home_page">
+              <p>
+                Honoring the Unsung Heroes of Waste Management: We're Here to
+                Support You
+              </p>
+              <p>To the Kabaadiwaale of India: Your Dedication Inspires Us</p>
+            </div>
+            <div className="AboutMessage__home_page">
+              <p>
+                To the resilient and hardworking Kabaadiwaale of India, we
+                extend our heartfelt appreciation for your tireless efforts in
+                waste management. Your invaluable contributions play a vital
+                role in keeping our neighborhoods clean and sustainable.
+                <br /> At Kabadi Techno, we recognize your importance and are
+                here to support you every step of the way.
+              </p>
+            </div>
           </div>
         </div>
+        <div className="mainKabadiwalaRight__home_page">
+          <div className="kabadiwalaImage__home_page">
+            <img
 
-        <div className="team__member__section" id="ourteam">
-            <h1>Our Team Members</h1>
-            {teamMember.length > 0 && (
-              <div className="about__carousel__section">
-                <Splide
-                  className="team__member"
-                  options={{
-                    type: "loop",
-                    gap: "1rem",
-                    autoplay: true,
-                    pauseOnHover: false,
-                    resetProgress: false,
-                    pagination: false,
-                    arrows: false,
-                  }}
-                >
-                  {teamMember.map((member, index) => (
-                    <SplideSlide className="member" key={index}>
-                      <img src={member.dp} alt={member.name} />
-                      <div>
-                        <h1>{member.name}</h1>
-                        <p>({member.title})</p>
-                      </div>
-                    </SplideSlide>
-                  ))}
-                </Splide>
-              </div>
-            )}
+              src="/Images/kabadiwala.png"
+              alt="kabadiwala"
+            />
           </div>
 
+          <form className="form">
+            <label>
+              Name <br />
+              <input
+                type="text"
+                placeholder=""
+                name="Name"
+                value={formValues.fullName}
+                onChange={(e) =>
+                  setFormValues({ ...formValues, fullName: e.target.value })
+                }
+                required
+              />
+            </label>
+            <label>
+              Phone Number <br />
+              <input
+                type="number"
+                placeholder=""
+                name="Number"
+                max="9999999999"
+                min="1000000000"
+                value={formValues.number}
+                onChange={(e) =>
+                  setFormValues({ ...formValues, number: e.target.value })
+                }
+                required
+              />
+            </label>
 
-        <Modal
-          className="modal__content"
-          overlayClassName="modal__overlay"
-          isOpen={isOpen}
-          ariaHideApp={false}
+            <label>
+              Email <br />
+              <input
+                type="email"
+                placeholder=""
+                name="Email"
+                value={formValues.email}
+                onChange={(e) =>
+                  setFormValues({ ...formValues, email: e.target.value })
+                }
+                required
+              />
+            </label>
+
+            <label>
+              Message
+              <br />
+              <input
+                type="text"
+                className="message__home_page"
+                placeholder=""
+                name="Message"
+                value={formValues.message}
+                onChange={(e) =>
+                  setFormValues({ ...formValues, message: e.target.value })
+                }
+                required
+              />
+            </label>
+            <div className="button outsideKabadiwalabtn">
+              <button className="btn kabaadiwalabtn">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    {/* RECYCLING PLANT */}
+    <div className="plantsContainer__home_page__">
+      <div className="bg_image__home_page__">
+        <img
+
+          src="/images/bg_image1.png"
+          className="bg_image1"
+          alt=""
+        />
+        <img
+
+          src="/images/bg_image2.png"
+          className="bg_image2"
+          alt=""
+        />
+      </div>
+      <div className="main_plantContainer__home_page__">
+        <h1>Top Recycling Plants in India</h1>
+        <Splide
+          className="plantsContainerCards__home_page"
+          options={{
+            arrows: false,
+            perPage: 3,
+            gap: "7px",
+            // gap: 21,
+            // fixedWidth: true,
+            // arrows: true,
+            pagination: false,
+            breakpoints: {
+              1200: { perPage: 2, gap: "1rem" },
+              600: { perPage: 1 },
+            },
+          }}
         >
-          <h1>Any suggestion for us?</h1>
-          <input type="text" placeholder="Name" name="name" value={inputValue.name} onChange={getInputValue} />
-          <input type="email" placeholder="Email" name="email" value={inputValue.email} onChange={getInputValue} />
-          <input type="text" placeholder="Phone" name="phone" value={inputValue.phone} onChange={getInputValue} />
-          <input type="text" placeholder="Message" name="message" value={inputValue.message} onChange={getInputValue} />
-          <div>
-            <button onClick={voteSuggestion}>Done</button>
-            <button onClick={() => { setInputValue({ name: "", email: "", phone: "", message: "" }); setIsOpen(false); }}>Skip</button>
+          {plant.map((list) => {
+            return (
+              <SplideSlide key={list.id}>
+                <Link href={`/page5/${list.id}`} className="link">
+                  <div className="plantsCards__home_page" key={list.id}>
+                    <img
+                      className="imagePlantCard__home_Page"
+                      src={list.img}
+                      alt=""
+                    />
+                    <h2>{list.heading}</h2>
+                    <p>{list.para}</p>
+                  </div>
+                </Link>
+              </SplideSlide>
+            );
+          })}
+        </Splide>
+      </div>
+    </div>
+
+    {/*Founder */}
+    <div className="founder__home_page">
+      <div className="mainFounder__home_page">
+        <div className="founder_heading__home_page">
+          <p>Message from the founder</p>
+          <div className="founder_message__home_page">
+            <h1>Mr. Kuldeep </h1>
+            <p>
+              I am a passionate entrepreneur who handles waste management
+              using technology.
+            </p>
+            <p>
+              I recognized a gap in the market and founded the company in
+              2018, which was recognized by Startup India and received a DPIIT
+              certificate. I have filed provisional patents for my IoT-based
+              Collection Vendor Machine (CVM) for E-waste management and
+              currently manage a team of 20+ interns in different fields for
+              my company.
+            </p>
+            <p>
+              I believe waste management is the second biggest problem in
+              India and am dedicated to fighting the poor waste management
+              system with technology.
+            </p>
           </div>
-        </Modal>
+        </div>
+        <div className="founder_image__home_page">
+
+          <Image src="/Images/founder.png" alt="Founder" width={500} height={500} />
+        </div>
+      </div>
+    </div>
+
+    {/*Ideas*/}
+    <div className="ideas__home_page">
+      <div className="mainIdeas__home_page">
+        <h1>Ideas</h1>
+        <hr className="horizontalLine__home_page" />
+        <Splide
+          className="mainIdeaContainer__home_page"
+          options={{
+            arrows: false,
+            autoplay: true,
+            perPage: 3,
+            gap: "7px",
+            breakpoints: {
+              900: { perPage: 2, gap: "1rem" },
+              600: { perPage: 1 },
+            },
+          }}
+        >
+          {ideas.map((idea) => {
+            return (
+              <SplideSlide key={idea?.id}>
+                <Link href={`/page5/${idea.id}`} className="link">
+                  <div
+                    className="mainIdeaContainerLeft__home_page"
+                    key={idea.id}
+                  >
+                    <img src="/Images/idea.png" alt="idea" />
+                    <p>{idea.para}</p>
+                    <span>{idea.year}</span>
+                  </div>
+                </Link>
+              </SplideSlide>
+            );
+          })}
+        </Splide>
+      </div>
+    </div>
+
+    {/*CLOCK*/}
+    <div className="wasteContainer__home_page">
+      <div className="mainWasteContainer__home_page">
+        <div className="mainheading__home_page">
+          <h1>WASTE CLOCK</h1>
+        </div>
+        <div className="wasteCard__home_page">
+          {/*map function */}
+          <div className="wasteCards__home_page">
+
+            <img src="/Images/plastic.png" />
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="517"
+              height="110"
+              viewBox="0 0 517 110"
+              fill="none"
+            >
+              <path
+                d="M0.948242 18.4928C0.948242 8.55169 9.00712 0.492798 18.9482 0.492798H498.093C511.446 0.492798 520.151 14.522 514.22 26.4865L478.026 99.5098C474.988 105.639 468.739 109.516 461.898 109.516H18.9482C9.00712 109.516 0.948242 101.457 0.948242 91.5161V18.4928Z"
+                fill="#112F34"
+              />
+            </svg>
+          </div>
+          <div className="wasteCards__home_page">
+
+            <img src="/Images/plastic.png" />
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="517"
+              height="110"
+              viewBox="0 0 517 110"
+              fill="none"
+            >
+              <path
+                d="M0.948242 18.4928C0.948242 8.55169 9.00712 0.492798 18.9482 0.492798H498.093C511.446 0.492798 520.151 14.522 514.22 26.4865L478.026 99.5098C474.988 105.639 468.739 109.516 461.898 109.516H18.9482C9.00712 109.516 0.948242 101.457 0.948242 91.5161V18.4928Z"
+                fill="#112F34"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {/* UPDATES */}
+    <div className="newBlog__home_page">
+      <div className="main_newBlog__home_page">
+        <h1>News, Blogs and Updates</h1>
+
+        <Splide
+          className="new_blog_card__home_page"
+          options={{
+            arrows: false,
+            perPage: 2,
+            gap: "7px",
+            breakpoints: {
+              1200: { perPage: 2, gap: "1rem" },
+              768: { perPage: 1 },
+            },
+          }}
+        >
+          {update.map((update) => {
+            return (
+              <SplideSlide key={update.id}>
+                <Link href={`/page5/${update.id}`} className="link">
+                  <div className="new_blog_cards__home_page">
+                    <img src={update.img} alt="" />
+                    <p>{update.para}</p>
+                  </div>
+                </Link>
+              </SplideSlide>
+            );
+          })}
+        </Splide>
+      </div>
+    </div>
+
+    {/*SERVICES */}
+    <div className="services__home_page">
+      <div className="main_services__home_page">
+        <div className="main_services_left__home_page">
+          <div className="services_heading__home_page">
+            <h1>Consultancy Services</h1>
+            <p>
+              Unlock Your Waste Management Potential with Kabadi Techno
+              Consultancy Services.
+            </p>
+          </div>
+          <div className="services_para__home_page">
+            <p>
+              Our handpicked agents bring expertise and a passion for positive
+              change. From waste reduction to compliance, we cover a wide
+              range of areas, staying up-to-date with the latest trends and
+              technologies.
+            </p>
+          </div>
+          <img src="/Images/services.png"  alt="Services" />
+          <p>
+            Contact us today and let our expert consultants propel your
+            success!
+          </p>
+        </div>
+        <div className="main_services_right__home_page">
+          <p className="services_unlock__home__page">
+            Unlock your waste management potential.{" "}
+          </p>
+          <p className="services_contact_home__page">
+            Contact us today and let our expert consultants propel your
+            success!
+          </p>
+          <form>
+            <input
+              className="ServicesInput"
+              type="text"
+              placeholder="Name"
+              name="Name"
+              value={formValuess.fullName}
+              onChange={(e) =>
+                setFormValuess({ ...formValuess, fullName: e.target.value })
+              }
+              required
+            />
+
+            <input
+              className="ServicesInput number__home_page"
+              type="number"
+              name="Number"
+              placeholder="Number"
+              value={formValuess.number}
+              onChange={(e) =>
+                setFormValuess({ ...formValuess, number: e.target.value })
+              }
+              required
+            />
+
+            <input
+              className="ServicesInput number__home_page"
+              type="email"
+              placeholder="Email"
+              name="Email"
+              value={formValuess.email}
+              onChange={(e) =>
+                setFormValuess({ ...formValuess, email: e.target.value })
+              }
+              required
+            />
+
+            <input
+              className="ServicesInput"
+              type="text"
+              name="Company"
+              placeholder="Company / Organization"
+              value={formValuess.company}
+              onChange={(e) =>
+                setFormValuess({ ...formValuess, company: e.target.value })
+              }
+              required
+            />
+
+            <input
+              className="ServicesInput"
+              type="text"
+              name="City"
+              placeholder="City"
+              value={formValuess.city}
+              onChange={(e) =>
+                setFormValuess({ ...formValuess, city: e.target.value })
+              }
+              required
+            />
+
+            <input
+              className="ServicesInput message"
+              type="text"
+              name="Message"
+              value={formValuess.message}
+              onChange={(e) =>
+                setFormValuess({ ...formValuess, message: e.target.value })
+              }
+              required
+            />
+            <div>
+              <button className="button__home_page">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    {/*SUPPORT*/}
+    <div className="supportContainer__home_page">
+      <div className="main_supportContainer__home_page">
+        <div className="main_supportContainerLeft__home_page">
+          <img src="/Images/servicess.png" />
+        </div>
+        <div className="main_supportContainerRight__home_page">
+          <div className="rightTopMain_supportContainer__home_page">
+            <h1>
+              Support a Cleaner Future:
+              <br />
+              <span>Donate to Waste Management Initiatives Today!</span>{" "}
+            </h1>
+          </div>
+          <div className="rightBottomMain_supportContainer__home_page">
+            <p>
+              By donating to our cause, you directly contribute to vital
+              projects that address waste reduction, recycling, education, and
+              community engagement. Together, we can tackle the pressing
+              challenges of waste management and build a brighter future for
+              generations to come.
+            </p>
+            <div className="support_button__home_page">
+              <Link href="/donation">
+                <span className="button__home_page">
+                  Monetary Donation
+                </span>
+              </Link>
+
+              <Link href="/Wastedonation">
+                {" "}
+                <span className="button__home_page">Waste Donation</span>
+              </Link>
+            </div>
+            <p>7,803 people have donated!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {/*OUR HEROES */}
+    <div className="ourHero__home_page">
+      <div className="mainOurHero__home_page">
+        <h1>Meet our Heroes</h1>
+        <div>
+          {project.map((project) => {
+            return (
+              <Link href={`/page5/${project.id}`} key={project.id}>
+                <div className="card">
+                  <img src={project.img} alt="" />
+                  <div className="card-desc">
+                    <h2>{project.heading}</h2>
+                    <p>{project.para}</p>
+                  </div>
+                </div>
+              </Link>
+            );
+          })}
+        </div>
+      </div>
+    </div>
+
       </div>
 
     </>
   );
 };
 
-export default Home;
+export default HomePage;

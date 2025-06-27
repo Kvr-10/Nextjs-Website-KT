@@ -1,0 +1,1251 @@
+/* common */
+a {
+    text-decoration: none;
+    color: black;
+  }
+  
+  .home_page {
+    background-color: #052429;
+    width: 100%;
+  }
+  /* HERO SECTION */
+  .heroSection__home_page__ {
+    width: 100%;
+    background: linear-gradient(
+        rgba(6, 36, 38, 0.56) 100%,
+        rgba(6, 36, 38, 0.56) 100%
+      ),
+      url("/Images/Boat.png");
+    background-size: cover;
+  }
+  .mainSection__home_page__ {
+    width: 90%;
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 100px 0px 50px 0px;
+  }
+  .mainSection_left__home_page__ {
+    width: 100%;
+    flex-shrink: 0;
+  }
+  .mainSection_left__home_page__ > div {
+    width: 45%;
+    background: linear-gradient(
+      180deg,
+      rgba(77, 173, 21, 0.73) 0%,
+      rgba(5, 36, 41, 0.73) 99.99%,
+      rgba(77, 173, 21, 0) 100%
+    );
+    border-radius: 0px 100px 0px 100px;
+    padding: 30px 20px;
+  }
+  .mainSection_left__home_page__ > div > quote {
+    width: 80%;
+    color: #fff;
+    font-family: Segoe UI;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 127.523%;
+  }
+  .mainSection_right__home_page__ {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 50px;
+  }
+  
+  /*  BUTTON  */
+  .button__home_page {
+    background: #4eaf14;
+    color: white;
+    padding: 9px 15px;
+    border: 3px solid silver;
+    border-bottom: 3px solid gray;
+    border-right: 3px solid gray;
+    border-radius: 40px;
+    width: 120px;
+  
+    text-align: center;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 162.523%; /* 26.004px */
+  }
+  .button__home_page:hover {
+    cursor: pointer;
+  }
+  .button__home_page:active {
+    background: rgba(5, 41, 16, 0.73);
+  }
+  
+  .button {
+    width: 171.482px;
+    height: 43px;
+    border-radius: 40px;
+    border: 2px solid hsl(98, 79%, 38%);
+    background-color: hsl(98, 79%, 38%);
+  }
+  .btn {
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    text-align: center;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 162.523%;
+    border-radius: 40px;
+    border: 1px solid #fff;
+    background: #4eaf14;
+    margin-top: -4px;
+  }
+  
+  /* KABADIWALA */
+  .mainKabadiwala__home_page {
+    width: 90%;
+    margin-top: 100px;
+    margin-inline: auto;
+    display: flex;
+  }
+  .mainKabadiwalaLeft__home_page {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+  }
+  .KabadiwalaButtons__home_page {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+  .outsideKabadiwalabtn__home_page {
+    width: 226px;
+    border: 2px solid white;
+    background-color: #052429;
+  }
+  .kabaadiwalabtn__home_page {
+    width: 226px;
+    border: 1px solid black;
+    background-color: white;
+    color: #052429;
+  }
+  .outsideCollectorbtn__home_page {
+    width: 226px;
+    border: 2px solid white;
+    background-color: #052429;
+  }
+  .collectorbtn__home_page {
+    width: 226px;
+    border: 1px solid white;
+    background-color: #052429;
+    color: white;
+  }
+  .MessageKabadiwala__home_page {
+    border-radius: 40px 0px 0px 40px;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 42px;
+    padding: 42px 42px 10px 42px;
+    background-image: url(/Images/Firefly\ aesthetic\ planter\ 41033\ 1.png);
+    background-position: 120% 100%;
+    background-repeat: no-repeat;
+    background-size: 50%;
+  }
+  .headingMessageKabadiwala__home_page {
+    display: flex;
+    align-items: center;
+  }
+  .headingMessageKabadiwala__home_page > h1 {
+    color: #052429;
+    font-family: Inter;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: -40px;
+  }
+  .topMessage__home_page > p {
+    color: #e17f0b;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-bottom: 0px;
+  }
+  .AboutMessage__home_page > p {
+    width: 70%;
+    color: #000;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 183.523%;
+  }
+  .mainKabadiwalaRight__home_page {
+    border-radius: 42px;
+    background: linear-gradient(180deg, #4eaf14 0.01%, #052429 99.99%);
+    box-shadow: 0px 4px 24px 18px rgba(0, 0, 0, 0.25);
+    margin-left: -10px;
+    /* padding: 20px; */
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    justify-content: space-evenly;
+  }
+  .kabadiwalaImage__home_page {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+    /* margin-inline: auto;*/
+  }
+  .kabadiwalaImage__home_page > img {
+    width: 80%;
+  }
+  .mainKabadiwalaRight__home_page > form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin-inline: auto;
+    padding-bottom: 50px;
+  }
+  .mainKabadiwalaRight__home_page > form label {
+    width: 100%;
+    color: #fff;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+  .mainKabadiwalaRight__home_page > form input {
+    width: 100%;
+    height: 40px;
+    border-radius: 20px;
+    background: #fff;
+    margin-bottom: 8px;
+  }
+  .message__home_page {
+    margin-bottom: 30px;
+    height: 127px;
+  }
+  
+  /* RECYCLING PLANT */
+  .bg_image__home_page__ {
+    width: 100%;
+    display: flex;
+  }
+  .bg_image1 {
+    width: 70%;
+  }
+  .bg_image2 {
+    width: 30%;
+  }
+  .main_plantContainer__home_page__ {
+    width: 90%;
+    margin-inline: auto;
+  }
+  .main_plantContainer__home_page__ > h1 {
+    color: #fff;
+    text-align: center;
+    font-family: Segoe UI;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-top: -100px;
+  }
+  .plantsContainerCards__home_page {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .splide__slide {
+    display: flex;
+    justify-content: center;
+  }
+  .splide.is-initialized {
+    visibility: visible;
+    margin-inline: auto;
+    padding: 0px 1px;
+  }
+  .plantsCards__home_page {
+    width: 90%;
+    /* height: 100%; */
+    border-radius: 10px;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+  }
+  .imagePlantCard__home_Page {
+    width: 100%;
+    max-height: 75%;
+    object-fit: contain;
+  }
+  .plantsCards__home_page > h2,
+  .plantsCards__home_page > p {
+    color: #000;
+    font-family: Inter;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-bottom: 0px;
+  }
+  .plantsCards__home_page > p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 151.023%; /* 24.164px */
+    margin-top: 0px;
+  }
+  
+  /* FOUNDER */
+  .mainFounder__home_page {
+    width: 90%;
+    margin-inline: auto;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 70px;
+    align-items: center;
+  }
+  .founder_heading__home_page {
+    width: 65%;
+  }
+  .founder_message__home_page {
+    background: url(/Images/image1.png),
+      linear-gradient(180deg, #98b3c6 3.35%, #05242a 75.59%);
+    background-blend-mode: luminosity;
+    padding: 50px;
+    border-radius: 20px;
+  }
+  .founder_message__home_page > h1 {
+    color: #fff;
+    font-family: Segoe UI;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+  .founder_message__home_page > p,
+  .founder_heading__home_page > p {
+    color: #fff;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 151.023%;
+  }
+  .founder_heading__home_page > p {
+    line-height: normal;
+    margin-left: 50px;
+  }
+  .founder_image__home_page {
+    width: 30%;
+    /* margin-left: -50px; */
+  }
+  .founder_image__home_page > img {
+    width: 100%;
+  }
+  /* IDEAS */
+  .mainIdeas__home_page {
+    width: 90%;
+    margin-inline: auto;
+    margin-top: 100px;
+  }
+  .mainIdeas__home_page > h1 {
+    color: #fff;
+    text-align: center;
+    font-family: Inter;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 34.8px;
+    text-transform: uppercase;
+    margin-bottom: 0px;
+  }
+  .horizontalLine__home_page {
+    width: 60%;
+    margin-bottom: 25px;
+    border-radius: 35px;
+    background: #fff;
+  }
+  .link {
+    text-decoration: none;
+    color: black;
+    display: flex;
+    justify-content: center;
+  }
+  .mainIdeaContainer__home_page {
+    background-image: url(/Images/image5.png);
+    border-radius: 20px;
+    padding-top: 100px;
+  }
+  .mainIdeaContainerLeft__home_page {
+    background-color: white;
+    padding: 20px;
+    border-radius: 20px;
+    margin-block: 35px;
+  }
+  .mainIdeaContainerLeft__home_page > img {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  .mainIdeaContainerLeft__home_page > p,
+  .mainIdeaContainerLeft__home_page > span {
+    color: #052429;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-bottom: 0px;
+  }
+  .mainIdeaContainerLeft__home_page > span {
+    color: rgba(5, 36, 41, 0.38);
+    line-height: 161.023%;
+  }
+  
+  /* CLOCK */
+  .mainWasteContainer__home_page {
+    width: 90%;
+    margin-inline: auto;
+    margin-top: 50px;
+  }
+  .mainheading__home_page {
+    background-image: url("/Images/waste.png"),
+      linear-gradient(to right, #6db3f2, #6db3f2);
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    /* padding: 25px; */
+    background-size: cover;
+    border-radius: 40px;
+    border: 7px solid #fff;
+  }
+  
+  .mainheading__home_page > h1 {
+    color: #fff;
+    font-family: Inter;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    letter-spacing: 4.8px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  .wasteCard__home_page {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 50px;
+  }
+  .wasteCards__home_page {
+    display: flex;
+    align-items: center;
+    width: 45%;
+  }
+  .wasteCards__home_page > img {
+    width: 40%;
+  }
+  .wasteCards__home_page > svg {
+    width: 60%;
+  }
+  
+  /* UPDATES */
+  .main_newBlog__home_page {
+    width: 90%;
+    margin-inline: auto;
+  }
+  .main_newBlog__home_page > h1 {
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    font-family: Segoe UI;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-bottom: 20px;
+    margin-top: 50px;
+  }
+  .new_blog_cards__home_page {
+    width: 90%;
+  }
+  .new_blog_cards__home_page > img {
+    width: 100%;
+  }
+  .new_blog_cards__home_page > p {
+    color: #fff;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+  
+  /* SERVICES */
+  .main_services__home_page {
+    width: 90%;
+    margin-inline: auto;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 75px;
+  }
+  .main_services_left__home_page {
+    width: 47%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  .main_services_left__home_page > div > h1 {
+    color: #fff;
+    font-family: Segoe UI;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+  .main_services_left__home_page > div > p,
+  .main_services_left__home_page > p {
+    color: #fff;
+    font-family: Inter;
+    font-size: 21px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 153.523%; /* 32.24px */
+  }
+  .main_services_left__home_page > img {
+    width: 100%;
+    order: 1;
+  }
+  
+  .main_services_right__home_page {
+    width: 43%;
+    border-radius: 20px;
+    background: linear-gradient(180deg, #4dae14 33.41%, #052429 80.57%);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .main_services_right__home_page > p {
+    width: 80%;
+    margin-inline: auto;
+    color: #000;
+    text-align: center;
+    font-family: Inter;
+    font-size: 21px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 103.523%; /* 21.74px */
+  }
+  
+  .main_services_right__home_page > form {
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /* flex-direction: column; */
+  }
+  .main_services_right__home_page > form > div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .ServicesInput {
+    width: 100%;
+    height: 53px;
+    border-radius: 30px;
+    background: #fff;
+    margin-bottom: 30px;
+    padding-left: 10px;
+  }
+  .message {
+    height: 206px;
+  }
+  
+  /* SUPPORT */
+  .supportContainer__home_page {
+    width: 90%;
+    margin-inline: auto;
+    background: url(/Images/image1.png),
+      linear-gradient(180deg, #98b3c6 3.35%, #05242a 75.59%);
+    background-blend-mode: luminosity;
+    border-radius: 20px;
+    margin-top: 50px;
+    background-repeat: no-repeat;
+  }
+  .main_supportContainer__home_page {
+    width: 90%;
+    display: flex;
+    margin-inline: auto;
+    justify-content: space-between;
+    padding: 30px 0px;
+    align-items: center;
+  }
+  .main_supportContainerLeft__home_page {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+  }
+  .main_supportContainerLeft__home_page > img {
+    width: 70%;
+  }
+  .main_supportContainerRight__home_page {
+    width: 60%;
+  }
+  .rightTopMain_supportContainer__home_page > h1 {
+    color: #fff;
+    font-family: Segoe UI;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 162.023%; /* 64.809px */
+  }
+  .rightTopMain_supportContainer__home_page > h1 > span {
+    color: #fff;
+    font-family: Segoe UI;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 162.023%;
+  }
+  .rightBottomMain_supportContainer__home_page > p {
+    color: #fff;
+    text-align: right;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 153.523%; /* 30.705px */
+  }
+  .support_button__home_page {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .support_button__home_page > a {
+    width: 45%;
+  }
+  .support_button__home_page > a > button {
+    width: 100%;
+  }
+  
+  /* OUR HEROES */
+  .mainOurHero__home_page {
+    width: 90%;
+    margin-inline: auto;
+    padding-bottom: 100px;
+  }
+  .mainOurHero__home_page > h1 {
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    font-family: Segoe UI;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+  .mainOurHero__home_page > div {
+    background-color: #fff;
+    padding: 5px 0px;
+    border-radius: 1.25rem;
+    max-height: 400px;
+    overflow-y: auto;
+  }
+  /* ::-webkit-scrollbar {
+    width: 10px;
+  } */
+  
+  .ourHero_project__home_page {
+    border-radius: 20px;
+    background: #ffffffe3;
+    /* padding: 10px 0px; */
+  }
+  .cards {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.89);
+    border-radius: 20px;
+  }
+  
+  .card {
+    margin: 30px 0px;
+    display: flex;
+    /* position: relative; */
+    justify-content: space-around;
+    width: 98%;
+    max-height: 270px;
+    /* border: 1px solid black; */
+  }
+  .card > img {
+    width: 30%;
+    height: 100%;
+    object-fit: contain;
+    /* position: relative; */
+  }
+  
+  .card-desc {
+    /* position: relative; */
+    width: 60%;
+    left: 0;
+    padding: 18px 0px;
+    overflow-y: scroll;
+    text-align: justify;
+  }
+  .card-desc > h2 {
+    margin-top: 0px;
+    font-size: 36px;
+  }
+  .card-desc > p {
+    font-size: 20px;
+  }
+  .card-desc::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* MEDIA QUERY */
+  
+  @media (max-width: 1024px) {
+    /* HERO SECTION */
+    .mainSection_left__home_page__ > div {
+      padding: 27px 55px;
+    }
+    .mainSection_left__home_page__ > div > quote {
+      font-size: 32px;
+    }
+    .main_plantContainer__home_page__ > h1 {
+      font-size: 42px;
+    }
+    .plantsCards__home_page > h2 {
+      font-size: 24px;
+    }
+    /* ideas */
+    .mainIdeas__home_page {
+      margin-top: 80px;
+    }
+    /* clock */
+    .mainheading__home_page > h1 {
+      font-size: 46px;
+    }
+    /* support */
+    .rightTopMain_supportContainer__home_page > h1 {
+      font-size: 36px;
+      line-height: 115%;
+    }
+    .rightTopMain_supportContainer__home_page > h1 > span {
+      font-size: 24px;
+    }
+    .rightBottomMain_supportContainer__home_page > p {
+      font-size: 19px;
+      text-align: right;
+    }
+    /*  */
+    .aboutOurProjectCards > p {
+      font-size: 18px;
+    }
+    .ourProjectCards__home_page > img {
+      width: 30%;
+    }
+    .aboutOurProjectCards {
+      width: 78%;
+    }
+    /*  */
+    .mainOurHero__home_page > h1 {
+      font-size: 36px;
+    }
+    .ourProjectCards__home_page > .aboutOurProjectCards > h4 {
+      font-size: 30px;
+    }
+  }
+  
+  @media (max-width: 900px) {
+    /* HERO SECTION */
+    .mainSection_left__home_page__ > div {
+      padding: 27px 55px;
+    }
+    .mainSection_left__home_page__ > div > quote {
+      font-size: 28px;
+    }
+    .mainSection_right__home_page__ {
+      margin-top: 30px;
+    }
+    .button__home_page {
+      font-size: 14px;
+    }
+    /* RECYCLING PLANT */
+    .plantsCards__home_page {
+      width: 85%;
+    }
+    .main_plantContainer__home_page__ > h1 {
+      font-size: 36px;
+      margin-top: -70px;
+    }
+    .plantsCards__home_page > h2 {
+      font-size: 20px;
+    }
+    /* founder */
+    .founder_message__home_page {
+      padding: 23px;
+    }
+    /* IDEAS */
+    .mainIdeas__home_page {
+      margin-top: 50px;
+    }
+    .mainIdeaContainerLeft__home_page {
+      width: 75%;
+    }
+    .mainIdeas__home_page > h1,
+    .main_newBlog__home_page > h1,
+    .mainheading__home_page > h1 {
+      font-size: 40px;
+    }
+    /* Services */
+    .main_services__home_page {
+      flex-direction: column;
+    }
+    .main_services_left__home_page {
+      width: 100%;
+      flex-direction: row;
+      justify-content: center;
+    }
+    .services_heading__home_page {
+      width: 50%;
+      order: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .main_services_left__home_page > .services_heading__home_page > h1 {
+      font-size: 36px;
+    }
+    .main_services_left__home_page > .services_heading__home_page > p {
+      color: #4dae14;
+    }
+    .main_services_left__home_page > p {
+      display: none;
+    }
+    .main_services_left__home_page > img {
+      width: 45%;
+      order: 1;
+    }
+    .services_para__home_page {
+      width: 100%;
+      order: 2;
+    }
+    .main_services_right__home_page {
+      width: 100%;
+      padding: 0px;
+      padding-bottom: 18px;
+    }
+    .ServicesInput {
+      width: 100%;
+      height: 42px;
+      border-radius: 18px;
+      background: #fff;
+      margin-bottom: 15px;
+    }
+    .ServicesInput {
+      width: 45%;
+    }
+    /* support */
+    .rightTopMain_supportContainer__home_page > h1 {
+      font-size: 30px;
+    }
+    .rightTopMain_supportContainer__home_page > h1 > span {
+      font-size: 20px;
+    }
+    .rightBottomMain_supportContainer__home_page > p {
+      font-size: 17px;
+    }
+    .support_button__home_page > button {
+      font-size: 14px;
+    }
+  
+    /*  */
+    .mainOurHero__home_page > h1 {
+      font-size: 30px;
+    }
+    .card-desc > h2 {
+      font-size: 30px;
+    }
+    .card-desc > p {
+      font-size: 16px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    /* HERO SECTION */
+    .mainSection_left__home_page__ > div {
+      padding: 24px 55px;
+    }
+    .mainSection_left__home_page__ > div > quote {
+      font-size: 22px;
+    }
+    /* kabadiwala */
+    .mainKabadiwala__home_page {
+      flex-direction: column;
+      background: white;
+      align-items: center;
+      border-radius: 10px;
+    }
+    .mainKabadiwalaLeft__home_page {
+      width: 100%;
+      /* border-radius: 40px; */
+    }
+    .headingMessageKabadiwala__home_page > h1 {
+      font-size: 30px;
+    }
+    .AboutMessage__home_page > p {
+      width: 80%;
+      font-size: 16px;
+    }
+    .KabadiwalaButtons__home_page {
+      width: 96%;
+      justify-content: flex-end;
+    }
+    .outsideKabadiwalabtn__home_page,
+    .kabaadiwalabtn__home_page,
+    .outsideCollectorbtn__home_page,
+    .collectorbtn__home_page {
+      width: 160px;
+    }
+    .MessageKabadiwala__home_page {
+      margin-top: 0px;
+      padding-top: 30px;
+    }
+    .mainKabadiwalaRight__home_page {
+      width: 95%;
+      margin-block: 10px;
+      border-radius: 10px;
+      margin-left: 0px;
+    }
+    .mainKabadiwalaRight__home_page > .form {
+      padding-bottom: 30px;
+    }
+    .mainKabadiwalaRight__home_page > .form > label {
+      font-size: 16px;
+    }
+    .mainKabadiwalaRight__home_page > .form > label > input {
+      height: 25px;
+      border-radius: 8px;
+    }
+    /* RECYCLING PLANT */
+    .main_plantContainer__home_page__ > h1 {
+      font-size: 28px;
+      margin-top: -40px;
+    }
+    .plantsCards__home_page > h2 {
+      font-size: 16px;
+    }
+    /* founder */
+    .mainFounder__home_page {
+      flex-direction: column-reverse;
+    }
+    .founder_heading__home_page {
+      width: 100%;
+    }
+    .founder_heading__home_page > p {
+      text-align: center;
+      margin-left: 0px;
+    }
+    .founder_image__home_page {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+    .founder_image__home_page > img {
+      height: 250px;
+      width: 250px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+    /* ideas */
+    .mainIdeas__home_page > h1,
+    .main_newBlog__home_page > h1,
+    .mainheading__home_page > h1 {
+      font-size: 36px;
+    }
+    /* services */
+    .main_services_left__home_page > .services_heading__home_page > h1 {
+      font-size: 30px;
+    }
+    /* support */
+    .rightTopMain_supportContainer__home_page > h1 {
+      font-size: 24px;
+      line-height: 115%;
+    }
+    .rightTopMain_supportContainer__home_page > h1 > span {
+      font-size: 17px;
+    }
+    .rightBottomMain_supportContainer__home_page > p {
+      font-size: 14px;
+      text-align: justify;
+    }
+    .support_button__home_page > button {
+      font-size: 12px;
+    }
+    /*  */
+    .mainOurHero__home_page > h1 {
+      font-size: 26px;
+    }
+    .card-desc > h2 {
+      font-size: 24px;
+    }
+    .card-desc > p {
+      font-size: 14px;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    /* HERO SECTION */
+    .mainSection_left__home_page__ > div {
+      padding: 20px 45px;
+    }
+    .mainSection_left__home_page__ > div > quote {
+      font-size: 16px;
+    }
+    .mainSection_right__home_page__ {
+      margin-top: 20px;
+    }
+    /* kabadiwala */
+    .mainKabadiwala__home_page {
+      margin-top: 45px;
+    }
+    .headingMessageKabadiwala__home_page > h1 {
+      font-size: 26px;
+    }
+    .AboutMessage__home_page > p {
+      width: 85%;
+      font-size: 14px;
+    }
+    .topMessage__home_page > p {
+      font-size: 16px;
+    }
+  
+    /* RECYCLING PLANT */
+    .main_plantContainer__home_page__ > h1 {
+      font-size: 22px;
+    }
+    /* founder */
+    .mainFounder__home_page {
+      margin-top: 45px;
+    }
+    /* IDEAS */
+    .mainIdeaContainerLeft__home_page {
+      width: 70%;
+    }
+    .mainIdeas__home_page > h1,
+    .main_newBlog__home_page > h1,
+    .mainheading__home_page > h1 {
+      font-size: 28px;
+    }
+  
+    /* CLOCK */
+    .wasteCards__home_page {
+      flex-direction: column;
+      width: 50%;
+    }
+    .wasteCards__home_page > img {
+      width: 80%;
+    }
+    .wasteCards__home_page > svg {
+      width: 80%;
+    }
+    /* updates */
+    .main_newBlog__home_page > h1 {
+      margin-top: 20px;
+    }
+    /* services */
+    .main_services_left__home_page > .services_heading__home_page > h1 {
+      font-size: 24px;
+    }
+    .ServicesInput {
+      width: 100%;
+      height: 25px;
+      border-radius: 8px;
+    }
+    .number__home_page {
+      width: 45%;
+    }
+    .services_unlock__home__page {
+      display: none;
+    }
+    /* support */
+    .rightTopMain_supportContainer__home_page > h1 {
+      font-size: 20px;
+    }
+    .rightTopMain_supportContainer__home_page > h1 > span {
+      font-size: 15px;
+    }
+    .rightBottomMain_supportContainer__home_page > p {
+      font-size: 12px;
+    }
+    .support_button__home_page > button {
+      width: auto;
+      font-size: 10px;
+    }
+  
+    /*  */
+    .mainOurHero__home_page > h1 {
+      font-size: 20px;
+    }
+    .card {
+      max-height: 220px;
+    }
+    .card-desc > h2 {
+      font-size: 18px;
+    }
+    .card-desc > p {
+      font-size: 12px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    /* HERO SECTION */
+    .mainSection_left__home_page__ > div {
+      padding: 20px 60px;
+    }
+    .mainSection_left__home_page__ > div > quote {
+      font-size: 12px;
+    }
+    .button__home_page {
+      font-size: 12px;
+      width: 100px;
+      padding: 4px 15px;
+    }
+    /* kabadiwala */
+    .outsideKabadiwalabtn__home_page,
+    .kabaadiwalabtn__home_page,
+    .outsideCollectorbtn__home_page,
+    .collectorbtn__home_page {
+      width: 95px;
+      font-size: 12px;
+      height: 35px;
+    }
+  
+    .MessageKabadiwala__home_page {
+      padding: 20px 32px 10px 17px;
+    }
+    .headingMessageKabadiwala__home_page > svg {
+      width: 40px;
+      height: 40px;
+    }
+    .headingMessageKabadiwala__home_page > h1 {
+      font-size: 20px;
+    }
+    .topMessage__home_page > p {
+      font-size: 14px;
+    }
+    .AboutMessage__home_page > p {
+      width: 100%;
+      font-size: 12px;
+    }
+    /* RECYCLING PLANT */
+    .main_plantContainer__home_page__ > h1 {
+      font-size: 16px;
+      margin-top: -18px;
+    }
+    .plantsCards__home_page > h2 {
+      font-size: 12px;
+    }
+    /* founder */
+    .founder_heading__home_page > p {
+      font-size: 12px;
+    }
+    .founder_message__home_page {
+      padding: 13px;
+    }
+    .founder_message__home_page > h1,
+    .main_newBlog__home_page > h1,
+    .mainheading__home_page > h1 {
+      font-size: 26px;
+    }
+    .founder_message__home_page > p,
+    .new_blog_cards__home_page > p {
+      font-size: 12px;
+    }
+    /* ideas */
+    .mainIdeas__home_page > h1 {
+      font-size: 24;
+      letter-spacing: 11.6px;
+    }
+    /* services */
+    .main_services_left__home_page > .services_heading__home_page > h1 {
+      font-size: 16px;
+    }
+    .main_services_left__home_page > .services_heading__home_page > p {
+      font-size: 14px;
+    }
+    .main_services_left__home_page > .services_para__home_page > p {
+      font-size: 12px;
+    }
+    .main_services_right__home_page > form {
+      width: 90%;
+    }
+    .number__home_page {
+      width: 43%;
+    }
+    .main_services_right__home_page > .services_contact_home__page {
+      font-size: 12px;
+    }
+  
+    /* support */
+    .rightTopMain_supportContainer__home_page > h1 {
+      font-size: 16px;
+    }
+    .rightTopMain_supportContainer__home_page > h1 > span {
+      font-size: 12px;
+    }
+    .rightBottomMain_supportContainer__home_page > p {
+      font-size: 10px;
+    }
+    .support_button__home_page > button {
+      padding: 3px 6px;
+    }
+  
+    /* our hero */
+    .mainOurHero__home_page > h1 {
+      font-size: 16px;
+    }
+    .card {
+      max-height: 125px;
+    }
+    .card > img {
+      width: 35%;
+    }
+    .card-desc > h2 {
+      font-size: 14px;
+    }
+    .card-desc > p {
+      font-size: 10px;
+    }
+  }
+  
+  @media (max-width: 360px) {
+    /* HERO SECTION */
+    .mainSection_left__home_page__ > div {
+      padding: 17px 55px;
+    }
+  }
+  
