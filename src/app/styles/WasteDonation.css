@@ -5,6 +5,16 @@
     background-size: cover;
     padding: 50px 0px;
   }
+  .headingDonation{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    text-align: center;
+    color: black;
+    height: 188px;
+  }
   .secondWasteDonation {
     width: 80%;
     margin: auto;

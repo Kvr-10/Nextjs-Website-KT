@@ -66,6 +66,7 @@ const DealerProfileNavbar = () => {
     { href: '/dealer/pickup', icon: <TransferWithinAStationIcon />, label: 'Pickup' },
     { href: '/dealer/wallet', icon: <AccountBalanceWalletIcon />, label: 'Wallet' },
     { href: '/dealer/settings', icon: <SettingsIcon />, label: 'Settings' },
+    { href: '/sign-in', icon: <ExitToAppIcon />, label: 'Logout' },
   ];
 
   return (
@@ -83,9 +84,9 @@ const DealerProfileNavbar = () => {
           </li>
         ))}
         <li>
-          <button className="profile__link" onClick={logOut}>
+          {/* <button className="profile__link" onClick={logOut}>
             <ExitToAppIcon /> Logout
-          </button>
+          </button> */}
         </li>
       </ul>
     </>

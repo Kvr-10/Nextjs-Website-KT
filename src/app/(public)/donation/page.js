@@ -19,6 +19,7 @@ const Donation = () => {
             className="donationBackgoundImage"
             src="/Images/image1.png"
             alt="Background"
+            width={500} height={300}
           />
           <div className="headingDonation">
             <div></div>
@@ -50,19 +51,19 @@ const Donation = () => {
               </div>
               <div className="payment">
                 <div>
-                  <Image src="/Images/gpay.png" alt="Google Pay" />
+                  <Image src="/Images/gpay.png" alt="Google Pay" width={500} height={100}/>
                   <p>Google Pay</p>
                 </div>
                 <div>
-                  <Image src="/Images/phnpe.png" alt="Phonepe" />
+                  <Image src="/Images/phnpe.png" alt="Phonepe" width={500} height={100} />
                   <p>Phonepe</p>
                 </div>
                 <div>
-                  <Image src="/Images/Upi.png" alt="Other UPI" />
+                  <Image src="/Images/Upi.png" alt="Other UPI" width={500} height={100}/>
                   <p>Other UPI</p>
                 </div>
                 <div>
-                  <Image src="/Images/credit.png" alt="Credit Card" />
+                  <Image src="/Images/credit.png" alt="Credit Card" width={500} height={100}/>
                   <p>Credit/Debit Card</p>
                 </div>
               </div>
@@ -71,7 +72,7 @@ const Donation = () => {
 
           <div className="donationImage">
             <div className="donationCircularImage">
-              <Image src="/Images/image 20.png" alt="Donation Info" />
+              <Image src="/Images/image 20.png" alt="Donation Info" width={500} height={500} />
             </div>
             <div className="rectangle-270">
               <p>
