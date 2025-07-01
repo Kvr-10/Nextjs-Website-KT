@@ -88,7 +88,9 @@ const DealerSignUpStep2 = () => {
           data.append('profile_type', 'Recycler');
 
         try {
-          const res = await axios.post(`${apiUrl1}/v3/api/register/`, data);
+          const res = await axios.post(`${apiUrl1}/accounts/register/`, data);
+          console.log(res);
+          
 
           if (res.status === 201) {
             localStorage.removeItem('KTMinfo');

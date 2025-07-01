@@ -89,7 +89,7 @@ const SignUpAddressInfoStep = () => {
 
     try {
       const infos = JSON.parse(localStorage.getItem('KTMinfo'));
-      const registrationUrl = `${apiUrl}/v3/api/registration/${userType}/`;
+      const registrationUrl = `${apiUrl}/accounts/register/`;
 
       try {
         await axios.get(

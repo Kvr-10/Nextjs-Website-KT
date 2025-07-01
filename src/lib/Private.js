@@ -4,5 +4,8 @@
 // export const apiUrl = "https://ip.kabaditechno.com";
 // export const apiUrl = "https://api.kabaditechno.com";
 // export const apiUrl = "https://apis.kabaditechno.com";
-export const apiUrl = "https://apis.kabaditechno.com";
-export const apiUrl1 = "https://test.kabaditechno.com"
+// export const apiUrl = "https://apis.kabaditechno.com";
+// export const apiUrl = "https://apis.kabaditechno.com";
+export const apiUrl = "https://peru-cgi-conditioning-xi.trycloudflare.com";
+// export const apiUrl1 = "https://test.kabaditechno.com"
+export const apiUrl1 = "https://peru-cgi-conditioning-xi.trycloudflare.com"

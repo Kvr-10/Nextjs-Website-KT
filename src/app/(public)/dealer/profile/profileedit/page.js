@@ -26,7 +26,7 @@ const DealerProfileEdit = () => {
   useEffect(() => {
     const apiKey = JSON.parse(localStorage.getItem('KTMauth'));
     axios
-      .get(`${apiUrl1}/v3/api/view-profile/dealer/${apiKey?.tokens?.refresh}`)
+      .get(`${apiUrl1}/accounts/dealer-profile/${apiKey?.tokens?.refresh}`)
       .then((res) => setDealerData(res.data))
       .catch((err) => console.log(err));
   }, []);

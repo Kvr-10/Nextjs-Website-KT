@@ -50,13 +50,13 @@ const login = async (e, usertype) => {
     };
 
 try {
-  const res = await axios.post(`${apiUrl1}/v3/api/login/`, user);
+  const res = await axios.post(`${apiUrl1}/accounts/login/`, user);
   console.log(res.data);
 
   if (res.data.msg === "Account Does Not Exist.") {
     Swal.fire({ title: "Account doesn't exist. Signup first.", confirmButtonColor: "#56b124" });
   } else if (res.data.msg === "Your account is not verified yet. Plz verify it first.") {
-   await axios.post(`${apiUrl1}/v3/api/login/`, user);
+   await axios.post(`${apiUrl1}/accounts/login/`, user);
     Swal.fire({
       title: "Activation link sent. Please verify your email.",
       confirmButtonColor: "#56b124"
