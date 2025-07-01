@@ -5,9 +5,7 @@ import Image from 'next/image';
 
 import '@/app/styles/WasteDonation.css';
 
-import backgroundImage from '@/public/Images/image1.png';
-import circularImage from '@/public/Images/image 20.png';
-import qrCodeImage from '@/public/Images/qrCode.png';
+
 
 const WasteDonation = () => {
   useEffect(() => {
@@ -20,8 +18,9 @@ const WasteDonation = () => {
         <div className="firstHeadingOfDonation">
           <Image
             className="donationBackgoundImage"
-            src={backgroundImage}
+            src="/Images/image1.png"
             alt="Donation background"
+            width={1600} height={100}
           />
           <div className="headingDonation">
             <div></div>
@@ -35,7 +34,7 @@ const WasteDonation = () => {
         <div className="secondWasteDonation">
           <div className="wastedonationImage">
             <div className="wastedonationCircularImage">
-              <Image src={circularImage} alt="Thank You" />
+              <Image src="/Images/image 20.png" alt="Thank You" width={500} height={500} />
             </div>
             <div className="rectangle-270-block2">
               <div>
@@ -45,7 +44,7 @@ const WasteDonation = () => {
                 <p>Name:</p>
                 <p>Name:</p>
                 <div>
-                  <Image src={qrCodeImage} alt="QR Code" />
+                  <Image src="/Images/qrCode.png" alt="QR Code" width={100} height={100}/>
                   <p className="kabadiDonation">KabadiTechno pvt. ltd.</p>
                   <p className="paraDonation">Donation</p>
                 </div>
